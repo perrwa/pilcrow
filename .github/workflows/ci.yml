@@ -2,6 +2,8 @@ name: CI
 
 on:
   pull_request:
+  push:
+    branches: [main]
 
 permissions:
   contents: read
@@ -12,34 +14,8 @@ concurrency:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
-
-      - name: Setup Node
-        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
-        with:
-          node-version-file: package.json
-          cache: npm
-
-      - name: Cache Joan font
-        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
-        with:
-          path: fonts
-          key: joan-font-${{ hashFiles('scripts/fetch-joan.mjs') }}
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Check formatting
-        run: npm run format:check
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Test
-        run: npm test
-
-      - name: Build
-        run: npm run build
+    uses: perrwa/dotfiles/.github/workflows/node-ci.yml@09986fe5bed26be194ef2bf244c52cd12f9df450 # ci: add reusable node-ci.yml workflow (#4)
+    with:
+      cache-path: fonts
+      cache-key-file: scripts/fetch-joan.mjs
+      cache-key-prefix: joan-font
