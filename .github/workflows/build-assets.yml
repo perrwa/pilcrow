@@ -51,3 +51,69 @@ jobs:
           git commit -m 'chore: regenerate brand assets [skip ci]'
           git pull --rebase origin main
           git push origin HEAD:main
+
+  sync-favicon:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # Fresh checkout (not the build job's workspace — separate runner) at
+      # main, so this picks up whatever the build job just pushed, even
+      # though that push is [skip ci] and won't start its own run.
+      - name: Checkout pilcrow
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          ref: main
+          path: pilcrow
+
+      - name: Require sync token
+        env:
+          SITE_SYNC_TOKEN: ${{ secrets.SITE_SYNC_TOKEN }}
+        run: |
+          if [ -z "$SITE_SYNC_TOKEN" ]; then
+            echo '::error::SITE_SYNC_TOKEN secret is not set — cannot sync favicon to perrwa.github.io'
+            exit 1
+          fi
+
+      # perrwa/perrwa.github.io is public but this repo is private, so a
+      # PAT scoped to just that repo (contents+PRs: write) is used instead
+      # of GITHUB_TOKEN. GITHUB_TOKEN-authored pushes also don't trigger
+      # workflows on the target repo, which would leave the PR's required
+      # checks (verify, lint-title) stuck pending forever.
+      - name: Checkout perrwa.github.io
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          repository: perrwa/perrwa.github.io
+          token: ${{ secrets.SITE_SYNC_TOKEN }}
+          path: site
+
+      - name: Sync favicon files and open a PR
+        env:
+          GH_TOKEN: ${{ secrets.SITE_SYNC_TOKEN }}
+        run: |
+          cp pilcrow/brand/favicon/favicon.svg site/public/favicon.svg
+          cp pilcrow/brand/favicon/favicon.ico site/public/favicon.ico
+          cp pilcrow/brand/favicon/apple-touch-icon.png site/public/apple-touch-icon.png
+
+          cd site
+          if git diff --quiet -- public/favicon.svg public/favicon.ico public/apple-touch-icon.png; then
+            echo 'site favicon assets already up to date, nothing to sync'
+            exit 0
+          fi
+
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout -B perrwa/sync-favicon
+          git add public/favicon.svg public/favicon.ico public/apple-touch-icon.png
+          git commit -m 'chore: sync favicon from pilcrow'
+          git push --force origin perrwa/sync-favicon
+
+          if gh pr view perrwa/sync-favicon --repo perrwa/perrwa.github.io >/dev/null 2>&1; then
+            echo 'PR already open on perrwa/sync-favicon, updated by the push above'
+          else
+            gh pr create --repo perrwa/perrwa.github.io \
+              --base main --head perrwa/sync-favicon \
+              --title 'chore: sync favicon from pilcrow' \
+              --body 'Automated sync of favicon.svg, favicon.ico, and apple-touch-icon.png from perrwa/pilcrow'"'"'s brand/favicon/. Review the rendered mark (light + dark) before merging.'
+          fi

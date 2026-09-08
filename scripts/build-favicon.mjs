@@ -6,25 +6,32 @@
 import { readFileSync, writeFileSync, copyFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const SVG_DIR = path.join(ROOT, 'brand', 'marks');
 const PNG_DIR = path.join(ROOT, 'brand', 'marks', 'png');
 const FAVICON_DIR = path.join(ROOT, 'brand', 'favicon');
+const PALETTE_PATH = path.join(ROOT, 'brand', 'palette', 'palette.json');
 
 mkdirSync(FAVICON_DIR, { recursive: true });
 
 // favicon.svg: identical to the mono mark.
 copyFileSync(path.join(SVG_DIR, 'pilcrow-mono.svg'), path.join(FAVICON_DIR, 'favicon.svg'));
 
-// apple-touch-icon.png: the already-rasterized 180 mono-light PNG (Apple
-// doesn't support transparency well here, but a transparent PNG degrades
-// gracefully — matches how most sites ship it).
-copyFileSync(
-  path.join(PNG_DIR, 'pilcrow-mono-light-180.png'),
-  path.join(FAVICON_DIR, 'apple-touch-icon.png'),
-);
+// apple-touch-icon.png: the 180 mono-light PNG, flattened onto the site's
+// light background. The source PNG has an opaque plate but a transparent
+// glyph and transparent corners (outside the plate's border-radius) — iOS
+// composites icon alpha over black, so left transparent this renders as a
+// solid black tile with the pilcrow invisible. Flattening bakes in the
+// site's actual background so the mark stays visible.
+const { site } = JSON.parse(readFileSync(PALETTE_PATH, 'utf8'));
+const [r, g, b] = site.bg.light.match(/\d+/g).map(Number);
+await sharp(path.join(PNG_DIR, 'pilcrow-mono-light-180.png'))
+  .flatten({ background: { r, g, b } })
+  .png()
+  .toFile(path.join(FAVICON_DIR, 'apple-touch-icon.png'));
 
 // favicon.ico: ICONDIR header (6B) + one ICONDIRENTRY (16B) per image,
 // followed by each image's raw PNG bytes. Modern ICO readers accept PNG
