@@ -13,7 +13,7 @@ import { SIZE, CY, COLORS, GOOFY_STROKE_WIDTH } from './mark-spec.mjs';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const FONT_PATH = path.join(ROOT, 'fonts', 'joan-regular.ttf');
-const SVG_DIR = path.join(ROOT, 'brand', 'marks', 'svg');
+const SVG_DIR = path.join(ROOT, 'brand', 'marks');
 const GOOFY_DIR = path.join(ROOT, 'brand', 'marks', 'goofy');
 
 mkdirSync(SVG_DIR, { recursive: true });

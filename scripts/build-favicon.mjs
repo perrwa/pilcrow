@@ -10,7 +10,7 @@ import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
-const SVG_DIR = path.join(ROOT, 'brand', 'marks', 'svg');
+const SVG_DIR = path.join(ROOT, 'brand', 'marks');
 const PNG_DIR = path.join(ROOT, 'brand', 'marks', 'png');
 const FAVICON_DIR = path.join(ROOT, 'brand', 'favicon');
 
@@ -22,7 +22,7 @@ copyFileSync(path.join(SVG_DIR, 'pilcrow-mono.svg'), path.join(FAVICON_DIR, 'fav
 // apple-touch-icon.png: the already-rasterized 180 mono-light PNG (Apple
 // doesn't support transparency well here, but a transparent PNG degrades
 // gracefully — matches how most sites ship it).
-copyFileSync(path.join(PNG_DIR, '180', 'pilcrow-mono-light.png'), path.join(FAVICON_DIR, 'apple-touch-icon.png'));
+copyFileSync(path.join(PNG_DIR, 'pilcrow-mono-light-180.png'), path.join(FAVICON_DIR, 'apple-touch-icon.png'));
 
 // favicon.ico: ICONDIR header (6B) + one ICONDIRENTRY (16B) per image,
 // followed by each image's raw PNG bytes. Modern ICO readers accept PNG
@@ -60,7 +60,7 @@ function buildIco(pngBuffers) {
 
 const pngBuffers = [];
 for (const size of ICO_SIZES) {
-  const buf = readFileSync(path.join(PNG_DIR, String(size), 'pilcrow-mono-light.png'));
+  const buf = readFileSync(path.join(PNG_DIR, `pilcrow-mono-light-${size}.png`));
   pngBuffers.push({ size, buf });
 }
 

@@ -16,3 +16,6 @@ export const COLORS = [
 ];
 
 export const GOOFY_STROKE_WIDTH = 5;
+
+// 16/32/48: favicon. 180: apple-touch-icon exact size. 512/1024: general/print use.
+export const SIZES = [16, 32, 48, 180, 512, 1024];
