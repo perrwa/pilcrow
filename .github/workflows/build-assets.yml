@@ -68,10 +68,13 @@ jobs:
           path: pilcrow
 
       - name: Require sync token
-        if: ${{ !secrets.SITE_SYNC_TOKEN }}
+        env:
+          SITE_SYNC_TOKEN: ${{ secrets.SITE_SYNC_TOKEN }}
         run: |
-          echo '::error::SITE_SYNC_TOKEN secret is not set — cannot sync favicon to perrwa.github.io'
-          exit 1
+          if [ -z "$SITE_SYNC_TOKEN" ]; then
+            echo '::error::SITE_SYNC_TOKEN secret is not set — cannot sync favicon to perrwa.github.io'
+            exit 1
+          fi
 
       # perrwa/perrwa.github.io is public but this repo is private, so a
       # PAT scoped to just that repo (contents+PRs: write) is used instead
