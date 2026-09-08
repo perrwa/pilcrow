@@ -24,3 +24,7 @@ npm run build
 That single command runs fetch, marks, raster, favicon, and palette generation in order. Each step can also run on its own: `npm run fetch`, `build:marks`, `build:raster`, `build:favicon`, `build:palette`. The font is pulled fresh from [PaoloBiagini/Joan](https://github.com/PaoloBiagini/Joan) on GitHub on every build rather than committed to the repo; `history/HISTORY.md` explains why GitHub was chosen over Google Fonts as the source.
 
 Every locked number, glyph size, vertical position, stroke width, and hex value, lives as a named constant in `scripts/mark-spec.mjs` and `scripts/plate-geometry.mjs` rather than as a magic literal buried in the generation code.
+
+## License
+
+Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — see `LICENSE`.
