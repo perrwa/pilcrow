@@ -1,8 +1,8 @@
 // Builds favicon.svg, favicon.ico (16/32/48, PNG-in-ICO — supported by
 // every browser and OS since Vista/IE9), and the apple-touch-icon, all
-// mono (matches perrwa.github.io's existing public/favicon.svg
-// convention). ICO has no library on npm worth adding for this — the
-// container format is ~20 lines to write by hand.
+// in the accent-blue variant (site's navy accent color). ICO has no
+// library on npm worth adding for this — the container format is ~20
+// lines to write by hand.
 import { readFileSync, writeFileSync, copyFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -17,10 +17,10 @@ const PALETTE_PATH = path.join(ROOT, 'brand', 'palette', 'palette.json');
 
 mkdirSync(FAVICON_DIR, { recursive: true });
 
-// favicon.svg: identical to the mono mark.
-copyFileSync(path.join(SVG_DIR, 'pilcrow-mono.svg'), path.join(FAVICON_DIR, 'favicon.svg'));
+// favicon.svg: identical to the accent-blue mark.
+copyFileSync(path.join(SVG_DIR, 'pilcrow-accent.svg'), path.join(FAVICON_DIR, 'favicon.svg'));
 
-// apple-touch-icon.png: the 180 mono-light PNG, flattened onto the site's
+// apple-touch-icon.png: the 180 accent-light PNG, flattened onto the site's
 // light background. The source PNG has an opaque plate but a transparent
 // glyph and transparent corners (outside the plate's border-radius) — iOS
 // composites icon alpha over black, so left transparent this renders as a
@@ -28,7 +28,7 @@ copyFileSync(path.join(SVG_DIR, 'pilcrow-mono.svg'), path.join(FAVICON_DIR, 'fav
 // site's actual background so the mark stays visible.
 const { site } = JSON.parse(readFileSync(PALETTE_PATH, 'utf8'));
 const [r, g, b] = site.bg.light.match(/\d+/g).map(Number);
-await sharp(path.join(PNG_DIR, 'pilcrow-mono-light-180.png'))
+await sharp(path.join(PNG_DIR, 'pilcrow-accent-light-180.png'))
   .flatten({ background: { r, g, b } })
   .png()
   .toFile(path.join(FAVICON_DIR, 'apple-touch-icon.png'));
@@ -69,7 +69,7 @@ function buildIco(pngBuffers) {
 
 const pngBuffers = [];
 for (const size of ICO_SIZES) {
-  const buf = readFileSync(path.join(PNG_DIR, `pilcrow-mono-light-${size}.png`));
+  const buf = readFileSync(path.join(PNG_DIR, `pilcrow-accent-light-${size}.png`));
   pngBuffers.push({ size, buf });
 }
 
