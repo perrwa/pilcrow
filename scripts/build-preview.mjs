@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { COLORS, GOOFY_STROKE_WIDTH } from './mark-spec.mjs';
+import { COLORS, GOOFY_STROKE_WIDTH, SIZES } from './mark-spec.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -25,7 +25,7 @@ function markCell(label, svgPath, light, dark) {
 }
 
 const primaryCells = COLORS.map((c) =>
-  markCell(c.label, path.join(ROOT, 'brand/marks/svg', `pilcrow-${c.key}.svg`), c.light, c.dark)
+  markCell(c.label, path.join(ROOT, 'brand/marks', `pilcrow-${c.key}.svg`), c.light, c.dark)
 ).join('\n');
 
 const goofyCells = COLORS.map((c) =>
@@ -95,7 +95,7 @@ ${goofyCells}
 <div class="links">
   <ul>
     <li><a href="brand/palette/palette.html">Brand palette</a> &mdash; site colors + Accent Blue + Warm Midcentury</li>
-    <li><a href="brand/marks/png/">Raster exports</a> &mdash; 10 sizes &times; 3 colors &times; light/dark</li>
+    <li><a href="brand/marks/png/">Raster exports</a> &mdash; ${SIZES.length} sizes &times; 3 colors &times; light/dark</li>
     <li><a href="history/HISTORY.md">Design history</a> &mdash; how this mark was decided, round by round</li>
   </ul>
 </div>

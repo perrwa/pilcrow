@@ -4,7 +4,7 @@ Personal brandmark: a serif pilcrow (¶), Perry Wang's first initial. Built from
 
 ## What's here
 
-`brand/marks/svg/` holds the mark in 3 colors, each flipping light and dark automatically via `prefers-color-scheme`. `brand/marks/png/{size}/` holds flattened PNGs at 16, 32, 48, 64, 128, 180, 192, 256, 512, and 1024, one file per color per mode, since a static PNG can't carry a media query the way an SVG can.
+`brand/marks/` holds the mark in 3 colors as SVG, each flipping light and dark automatically via `prefers-color-scheme`. `brand/marks/png/` holds flattened PNGs at 16, 32, 48, 180, 512, and 1024, one file per color per mode (`pilcrow-{color}-{mode}-{size}.png`), since a static PNG can't carry a media query the way an SVG can.
 
 `brand/marks/goofy/` is a faux-bold alt-direction. Joan has no real bold anywhere in its source, so this is a stroke-thickened variant, kept separate from the primary size matrix and not meant to substitute for it.
 
