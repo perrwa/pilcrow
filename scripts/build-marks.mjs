@@ -2,7 +2,7 @@
 // decided spec) in 3 colors, plus the "goofy" faux-bold alt-direction in
 // the same 3 colors, kept in a clearly separate folder. See
 // history/HISTORY.md for how these numbers were arrived at.
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { optimize } from 'svgo';
@@ -66,10 +66,13 @@ function write(filePath, raw) {
 }
 
 for (const c of COLORS) {
-  write(path.join(SVG_DIR, `pilcrow-${c.key}.svg`), plateSvg({ colorKey: c.key, light: c.light, dark: c.dark }));
+  write(
+    path.join(SVG_DIR, `pilcrow-${c.key}.svg`),
+    plateSvg({ colorKey: c.key, light: c.light, dark: c.dark }),
+  );
   write(
     path.join(GOOFY_DIR, `pilcrow-bold-${c.key}.svg`),
-    plateSvg({ colorKey: c.key, light: c.light, dark: c.dark, strokeWidth: GOOFY_STROKE_WIDTH })
+    plateSvg({ colorKey: c.key, light: c.light, dark: c.dark, strokeWidth: GOOFY_STROKE_WIDTH }),
   );
 }
 

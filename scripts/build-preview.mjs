@@ -10,7 +10,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 
 function forceColor(svgRaw, color) {
-  return svgRaw.replace(/<style>.*?<\/style>/s, '').replaceAll('class="mk"', `class="mk" fill="${color}"`);
+  return svgRaw
+    .replace(/<style>.*?<\/style>/s, '')
+    .replaceAll('class="mk"', `class="mk" fill="${color}"`);
 }
 
 function markCell(label, svgPath, light, dark) {
@@ -25,11 +27,16 @@ function markCell(label, svgPath, light, dark) {
 }
 
 const primaryCells = COLORS.map((c) =>
-  markCell(c.label, path.join(ROOT, 'brand/marks', `pilcrow-${c.key}.svg`), c.light, c.dark)
+  markCell(c.label, path.join(ROOT, 'brand/marks', `pilcrow-${c.key}.svg`), c.light, c.dark),
 ).join('\n');
 
 const goofyCells = COLORS.map((c) =>
-  markCell(c.label, path.join(ROOT, 'brand/marks/goofy', `pilcrow-bold-${c.key}.svg`), c.light, c.dark)
+  markCell(
+    c.label,
+    path.join(ROOT, 'brand/marks/goofy', `pilcrow-bold-${c.key}.svg`),
+    c.light,
+    c.dark,
+  ),
 ).join('\n');
 
 const html = `<!doctype html>

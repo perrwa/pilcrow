@@ -10,7 +10,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const FONT_URL = 'https://raw.githubusercontent.com/PaoloBiagini/Joan/main/fonts/ttf/Joan-Regular.ttf';
+const FONT_URL =
+  'https://raw.githubusercontent.com/PaoloBiagini/Joan/main/fonts/ttf/Joan-Regular.ttf';
 const OUT = path.join(__dirname, '..', 'fonts');
 
 mkdirSync(OUT, { recursive: true });

@@ -11,7 +11,7 @@ mkdirSync(PALETTE_DIR, { recursive: true });
 
 writeFileSync(
   path.join(PALETTE_DIR, 'palette.json'),
-  JSON.stringify({ site: SITE_PALETTE, brand: BRAND_PALETTE }, null, 2) + '\n'
+  JSON.stringify({ site: SITE_PALETTE, brand: BRAND_PALETTE }, null, 2) + '\n',
 );
 
 function titleCase(key) {

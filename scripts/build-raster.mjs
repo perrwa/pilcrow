@@ -2,7 +2,7 @@
 // decision to keep it a lightweight side-direction rather than part of
 // the shipped size/format matrix) to PNG at multiple sizes, one per
 // color x light/dark, since PNGs can't carry a prefers-color-scheme rule.
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, mkdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -16,7 +16,9 @@ const PNG_DIR = path.join(ROOT, 'brand', 'marks', 'png');
 mkdirSync(PNG_DIR, { recursive: true });
 
 function forceColor(svgRaw, color) {
-  return svgRaw.replace(/<style>.*?<\/style>/s, '').replaceAll('class="mk"', `class="mk" fill="${color}"`);
+  return svgRaw
+    .replace(/<style>.*?<\/style>/s, '')
+    .replaceAll('class="mk"', `class="mk" fill="${color}"`);
 }
 
 for (const c of COLORS) {
