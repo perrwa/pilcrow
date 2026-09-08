@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pilcrow Brand Palette</title>
+<style>
+  :root {
+    --bg: #f5f3ef; --panel: #fff; --ink: #1a1612; --ink-soft: #706860; --border: #ded6ca;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    --serif: Charter, Georgia, 'Times New Roman', serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14120f; --panel: #1e1b17; --ink: #e8e2d7; --ink-soft: #96897d; --border: #332e27; }
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--serif); margin: 0; padding: 2.5rem 1.5rem 4rem; }
+  header { max-width: 900px; margin: 0 auto 2rem; }
+  h1 { font-size: 1.7rem; margin: 0 0 0.3rem; }
+  h2 { font-size: 1.1rem; margin: 2rem auto 0.8rem; max-width: 900px; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+  p.lede { color: var(--ink-soft); font-size: 0.9rem; margin: 0; max-width: 70ch; }
+  .grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.8rem; }
+  .swatch { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 0.8rem; }
+  .chips { display: flex; height: 48px; border-radius: 6px; overflow: hidden; margin-bottom: 0.6rem; border: 1px solid var(--border); }
+  .chip { flex: 1; }
+  .name { display: block; font-weight: 600; font-size: 0.9rem; }
+  .values { display: block; font-family: var(--mono); font-size: 0.72rem; color: var(--ink-soft); margin-top: 0.1rem; }
+  .note { display: block; font-size: 0.72rem; color: var(--ink-soft); margin-top: 0.4rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Pilcrow Brand Palette</h1>
+  <p class="lede">Left chip is light mode, right chip is dark mode. Site palette is copied from <code>src/styles/global.css</code> in perrwa.github.io; brand accents are the two colors locked for the pilcrow mark.</p>
+</header>
+<h2>Site palette</h2>
+<div class="grid">
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:rgb(26, 22, 18)"></div>
+      <div class="chip" style="background:rgb(232, 226, 217)"></div>
+    </div>
+    <div class="label">
+      <span class="name">Black</span>
+      <span class="values"><code>rgb(26, 22, 18)</code> / <code>rgb(232, 226, 217)</code></span>
+      
+    </div>
+  </div>
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:rgb(112, 104, 96)"></div>
+      <div class="chip" style="background:rgb(150, 142, 132)"></div>
+    </div>
+    <div class="label">
+      <span class="name">Gray</span>
+      <span class="values"><code>rgb(112, 104, 96)</code> / <code>rgb(150, 142, 132)</code></span>
+      
+    </div>
+  </div>
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:rgb(228, 222, 214)"></div>
+      <div class="chip" style="background:rgb(48, 43, 38)"></div>
+    </div>
+    <div class="label">
+      <span class="name">Gray Light</span>
+      <span class="values"><code>rgb(228, 222, 214)</code> / <code>rgb(48, 43, 38)</code></span>
+      
+    </div>
+  </div>
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:rgb(40, 35, 30)"></div>
+      <div class="chip" style="background:rgb(214, 208, 199)"></div>
+    </div>
+    <div class="label">
+      <span class="name">Gray Dark</span>
+      <span class="values"><code>rgb(40, 35, 30)</code> / <code>rgb(214, 208, 199)</code></span>
+      
+    </div>
+  </div>
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:rgb(253, 252, 250)"></div>
+      <div class="chip" style="background:rgb(20, 18, 15)"></div>
+    </div>
+    <div class="label">
+      <span class="name">Bg</span>
+      <span class="values"><code>rgb(253, 252, 250)</code> / <code>rgb(20, 18, 15)</code></span>
+      
+    </div>
+  </div>
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:rgb(44, 62, 99)"></div>
+      <div class="chip" style="background:rgb(154, 178, 224)"></div>
+    </div>
+    <div class="label">
+      <span class="name">Accent</span>
+      <span class="values"><code>rgb(44, 62, 99)</code> / <code>rgb(154, 178, 224)</code></span>
+      
+    </div>
+  </div>
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:rgb(88, 110, 156)"></div>
+      <div class="chip" style="background:rgb(190, 208, 240)"></div>
+    </div>
+    <div class="label">
+      <span class="name">Accent Hover</span>
+      <span class="values"><code>rgb(88, 110, 156)</code> / <code>rgb(190, 208, 240)</code></span>
+      
+    </div>
+  </div>
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:rgb(58, 66, 84)"></div>
+      <div class="chip" style="background:rgb(198, 204, 216)"></div>
+    </div>
+    <div class="label">
+      <span class="name">Heading</span>
+      <span class="values"><code>rgb(58, 66, 84)</code> / <code>rgb(198, 204, 216)</code></span>
+      
+    </div>
+  </div>
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:oklch(0 0 0 / 0.1)"></div>
+      <div class="chip" style="background:oklch(1 0 0 / 0.1)"></div>
+    </div>
+    <div class="label">
+      <span class="name">Image Outline</span>
+      <span class="values"><code>oklch(0 0 0 / 0.1)</code> / <code>oklch(1 0 0 / 0.1)</code></span>
+      
+    </div>
+  </div>
+</div>
+<h2>Brand accents</h2>
+<div class="grid">
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:#2c3e63"></div>
+      <div class="chip" style="background:#9ab2e0"></div>
+    </div>
+    <div class="label">
+      <span class="name">Accent Blue</span>
+      <span class="values"><code>#2c3e63</code> / <code>#9ab2e0</code></span>
+      <span class="note">Same values as site accent, restated as standalone hex for use outside CSS-variable contexts (slides, print, etc.)</span>
+    </div>
+  </div>
+<div class="swatch">
+    <div class="chips">
+      <div class="chip" style="background:#b8542e"></div>
+      <div class="chip" style="background:#e3a458"></div>
+    </div>
+    <div class="label">
+      <span class="name">Warm Midcentury</span>
+      <span class="values"><code>#b8542e</code> / <code>#e3a458</code></span>
+      <span class="note">Introduced for the pilcrow brandmark; not currently used on the site</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

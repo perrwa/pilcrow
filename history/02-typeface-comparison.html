@@ -1,0 +1,249 @@
+<title>Pilcrow Variations</title>
+<style>
+  :root {
+    --bg: #f5f3ef;
+    --panel: #ffffff;
+    --ink: #1a1612;
+    --ink-soft: #706860;
+    --border: #ded6ca;
+    --accent: #2c3e63;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    --serif: Charter, Georgia, 'Times New Roman', serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14120f;
+      --panel: #1e1b17;
+      --ink: #e8e2d7;
+      --ink-soft: #96897d;
+      --border: #332e27;
+      --accent: #9ab2e0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    margin: 0;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  header { max-width: 1280px; margin: 0 auto 2.5rem; }
+  h1 { font-size: 1.9rem; margin: 0 0 0.3rem; letter-spacing: -0.01em; }
+  header p { color: var(--ink-soft); margin: 0; font-size: 0.95rem; max-width: 68ch; line-height: 1.5; }
+  section { max-width: 1280px; margin: 0 auto 3rem; }
+  .section-head { display: flex; align-items: baseline; gap: 0.9rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.6rem; }
+  .section-head h2 { font-size: 1.3rem; margin: 0; }
+  .section-head p { color: var(--ink-soft); margin: 0; font-size: 0.85rem; }
+  .row { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.75rem; }
+  .cell { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 0.7rem 0.6rem 0.6rem; display: flex; flex-direction: column; align-items: center; }
+  .cell.control { border-color: var(--accent); }
+  .mark-slot { width: 96px; height: 96px; display: flex; align-items: center; justify-content: center; }
+  .mark-slot svg { width: 84px; height: 84px; }
+  .gap-slot { color: var(--ink-soft); font-family: var(--mono); font-size: 1.5rem; opacity: 0.4; }
+  .label { text-align: center; margin-top: 0.5rem; width: 100%; }
+  .fam { display: block; font-size: 0.78rem; font-weight: 600; line-height: 1.2; }
+  .meta { display: block; font-family: var(--mono); font-size: 0.62rem; color: var(--ink-soft); margin-top: 0.15rem; }
+  .tag { font-family: var(--mono); font-size: 0.55rem; color: var(--accent); border: 1px solid var(--accent); border-radius: 3px; padding: 0 0.3rem; margin-left: 0.3rem; vertical-align: 1px; }
+  .cell.gap { opacity: 0.5; }
+</style>
+<header>
+  <h1>Sumi / Misregister / Plate — 14 typefaces</h1>
+  <p>Same three compositions from round 1, held constant, with the typeface swapped. Source Serif 4 (bordered) is the control. Each font uses the heaviest weight &le;700 it actually ships (labeled per cell) — most display faces only offer 400. All marks flip black/white with system dark mode; toggle to check.</p>
+</header>
+
+  <section>
+    <div class="section-head">
+      <h2>Sumi</h2>
+      <p>The bare glyph, optically centered.</p>
+    </div>
+    <div class="row">
+      <div class="cell control">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M63.63 80.421q-6.675-.106-12.343-1.96t-9.853-5.509-6.462-9.058T32.694 51.5q0-7.098 2.436-12.449 2.437-5.35 7.099-8.899 4.661-3.549 11.177-5.35Q59.92 23 68.079 23h9.11v6.886H63.63ZM72.316 105q.105-5.509.105-10.965V23h14.515q0 5.403-.053 10.86-.053 5.455-.053 10.964v38.14q0 5.509.053 11.018T86.937 105Zm8.58-74.372V23h14.41v6.78l-12.82.848Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Source Serif 4 <span class="tag">control</span></span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M76.621 35.986q-7.733 0-7.733 3.94L68.158 105h-12.84V81.363h-.291q-12.986 0-21.74-7.222-8.755-7.223-8.755-21.376 0-29.473 37.498-29.473l27.869-.146h2.48Q94.568 23 101.717 23l1.751 10.505q-9.192 1.022-11.673 1.532-2.48.511-2.48 1.678v68.14h-12.84Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Lusitana</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M65.99 63.063q-8.227.266-13.89-2.566-5.662-2.83-8.582-7.432-2.92-4.6-2.92-9.643 0-4.69 2.124-8.538 2.123-3.849 5.706-6.636t8.14-4.158 9.423-1.017ZM72.008 105V23.515q3.716.177 7.122.53 3.406.355 8.273.886l-.177 2.654q-1.505-.089-3.672.088t-3.76.62v74.23Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Joan</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="m69.413 26.859-1.018.053-2.037.108q-1.018.053-1.018.16l-.054 2.466q-.053 2.465-.16 6.431t-.215 8.575q-.107 4.61-.214 8.897-.107 4.288-.322 7.396-1.715.643-3.644.965t-3.538.321q-6.645 0-10.826-3-4.18-3.002-6.163-7.611-1.983-4.61-1.983-9.54 0-4.824 2.037-9.165t7.45-7.02q5.412-2.68 15.38-2.68h12.328q2.358 0 5.734-.108Q84.527 23 88.922 23q.536 0 .696.482.161.483.161 1.019 0 2.036-.857 2.036h-6.217q-.43 0-.965.643-.536.644-.911 2.627t-.375 6.163v25.618q0 7.61-.536 14.042t-2.359 10.933q-2.143 5.145-5.949 9.326-3.805 4.18-8.843 6.646Q57.73 105 51.727 105q-.75 0-2.09-.268t-2.466-1.125-1.125-2.466q0-4.073 4.716-5.895 2.358 1.393 5.36 2.09 3 .697 4.93.697 2.037 0 3.216-.965t1.93-2.358q1.071-2.251 1.714-6.539.644-4.287.965-9.218.322-4.93.429-9.38.107-4.448.107-7.02Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Sedan SC</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M54.682 105v-5.99l13.045-3.461V23.266h27.555v5.724l-10.915 3.594v63.098l10.915 3.46V105Zm4.126-29.552q-8.386 0-14.243-3.594t-8.852-9.585-2.995-13.178q0-7.322 2.995-13.179t8.852-9.384T58.808 23h1.465q.4 0 1.33.133v52.182q-.665.133-1.197.133z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Manuale</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M60.72 105V71.731h-3.046q-7.263 0-12.885-3.104-5.623-3.104-8.786-8.434T32.84 48.069v-1.406q0-7.029 3.28-12.359t9.079-8.317T58.377 23H95.16v82H82.509V34.949H73.37V105Zm-3.749-45.217h3.749V34.949h-3.749q-5.037 0-8.258 3.28-3.222 3.28-3.222 8.785v.703q0 5.506 3.398 8.786 3.397 3.28 8.082 3.28" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Space Grotesk</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M56.56 105V70.944h-1.983q-6.613 0-11.986-3.224t-8.597-8.68-3.224-12.068 3.224-12.069 8.597-8.68T54.577 23H97.23v82H79.375V39.863h-4.96V105Zm-1.983-50.92h1.983V39.864h-1.983q-2.646 0-4.795 1.736t-2.149 5.373 2.15 5.373q2.148 1.736 4.794 1.736" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Space Mono</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M69.348 53.601v-5.644h-7.13q-1.486 0-2.526.742-1.04.743-1.04 1.832 0 3.07 3.565 3.07Zm-14.261-3.07q0-2.525 2.104-4.332 2.105-1.808 5.026-1.808h10.696v57.044h3.565V40.826h-14.26q-4.16 0-7.428 2.971t-3.268 6.734q0 4.853 3.12 7.527t7.575 2.674h7.13v-3.565h-7.13q-7.13 0-7.13-6.636m35.652 50.904v-74.87H62.217q-6.635 0-12.404 3.293-5.768 3.293-9.16 8.839T37.26 50.53q0 6.834 3.417 12.479t9.135 8.814 12.404 3.169h7.13v-3.565h-7.13q-8.764 0-15.078-5.992-6.313-5.992-6.313-14.905 0-8.17 6.388-14.285Q53.6 30.13 62.217 30.13h24.957v71.305ZM80.043 105H69.348V78.558h-7.13q-5.794 0-10.969-1.931t-9.086-5.472-6.19-8.888-2.277-11.736q0-5.446 2.302-10.522 2.303-5.075 6.165-8.814t9.136-5.967T62.217 23h32.087v82H83.61V33.696H62.217q-7.13 0-12.478 5.075t-5.348 11.76q0 7.626 5.25 12.479 5.248 4.852 12.576 4.852h7.13v-3.565h-7.13q-5.942 0-10.101-3.738t-4.16-10.028q0-5.248 4.284-9.26 4.283-4.01 9.977-4.01h17.826Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Monoton</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M67.03 105q-2.317 0-3.921-1.783-1.605-1.782-1.605-4.278V75.23h-3.387q-8.378 0-14.884-3.387t-10.25-9.358-3.744-13.459q0-7.665 3.744-13.459 3.743-5.793 10.25-9.18T58.117 23h34.94q5.704 0 5.704 5.704 0 2.496-1.604 3.922t-4.1 1.426h-2.853v64.53q0 2.853-1.515 4.635Q87.174 105 84.68 105t-4.1-1.693-1.605-4.368V34.052h-6.24v64.53q0 2.853-1.604 4.635Q69.526 105 67.03 105m-8.913-70.948q-7.843 0-12.656 4.011-4.813 4.01-4.813 10.785 0 6.774 4.902 11.23t12.567 4.457h3.387V34.052Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Dongle</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M90.344 98.948q0 2.967 1.602 4.51T95.685 105t3.738-1.543 1.602-4.51V39.496q0-4.035-.297-6.883t-1.246-4.747-3.085-2.966-5.697-1.484T81.682 23H53.557q-5.815 0-10.68 1.899-4.865 1.898-8.425 5.4-3.56 3.5-5.519 8.128-1.958 4.628-1.958 10.205 0 5.578 2.077 10.206t5.637 8.01 8.07 5.221q4.509 1.84 9.255 1.84 3.917 0 7.773-1.068 3.857-1.068 7.002-3.086t5.043-4.924 1.899-6.586V37.478q0-2.374-1.068-3.857t-2.67-1.958-3.204.06q-1.602.533-2.67 1.957t-1.068 3.798v61.47q0 2.967 1.602 4.51T68.39 105t3.738-1.543 1.602-4.51V37.479q0-2.374-1.068-3.857t-2.67-1.958-3.204.06q-1.602.533-2.67 1.957t-1.068 3.798v20.766q0 1.306-.95 2.255-.949.95-2.492 1.543-1.542.593-3.5.89t-4.095.297q-3.678 0-6.942-1.84-3.263-1.84-5.34-5.162t-2.076-7.595q0-4.509 2.017-7.891t5.637-5.221q3.62-1.84 8.247-1.84h26.938q3.797 0 5.874.06 2.077.059 2.907.593t.95 2.017.118 4.332v58.266" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Tilt Neon</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M68.736 23v82H59.67l-4.06-41q-10.013-.27-15.899-5.21t-5.886-15.02 5.954-15.425T56.829 23Zm8.254 82V23h17.185l-8.119 82Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Wendy One</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M59.126 105V61.768q-5.33-.182-9.112-1.96-3.78-1.776-6.15-4.577-2.368-2.802-3.485-6.128t-1.116-6.605q0-4.784 2.028-9.27 2.027-4.488 6.673-7.358Q52.611 23 60.492 23h28.245v68.698L77.393 96.89V33.98h-6.879v65.873Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Overpass</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M60.082 105V61.722q-5.558-.136-9.475-1.913-3.918-1.777-6.355-4.601-2.438-2.825-3.554-6.173t-1.116-6.628q0-4.784 2.005-9.248 2.004-4.465 6.605-7.312T60.63 23h27.789v69.427l-10.57 4.829V33.113H70.56v67.15Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Overpass Mono</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="m97.337 103.662-10.33-.428.16-21.678q-3.693.75-7.038 1.017-3.345.268-6.129.375L73.68 105l-11.294-.428.428-22.16q-3.8-.535-7.6-1.525-3.801-.99-7.307-2.57-3.506-1.578-6.557-3.746-3.05-2.168-5.352-5.031-2.302-2.864-3.72-6.477t-1.58-8.055q-.267-6.477 1.446-11.374t4.737-8.457 7.012-5.915 8.27-3.746q4.281-1.392 8.51-1.954Q64.9 23 68.38 23q4.122.107 8.832.642 4.014.482 9.233 1.445t10.892 2.837ZM41.78 52.385q0 3.48 1.23 6.664 1.232 3.185 3.8 5.807 2.57 2.623 6.584 4.523 4.015 1.9 9.635 2.81l.75-38.11q-4.872.59-8.913 2.115-4.04 1.525-6.958 3.88-2.917 2.356-4.523 5.487-1.605 3.13-1.605 6.824m32.436 20.607q2.89 0 6.289-.294 3.399-.295 6.77-1.044l.322-35.273q-3.051-1.07-6.45-1.606-3.399-.535-6.29-.802Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">McLaren</span><span class="meta">weight 400</span></div>
+    </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Misregister</h2>
+      <p>Two copies offset ~6%, back copy faded — offset-print misprint.</p>
+    </div>
+    <div class="row">
+      <div class="cell control">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M69.647 73.62q-6.349-.1-11.74-1.864t-9.372-5.24q-3.98-3.477-6.147-8.617T40.22 46.11q0-6.752 2.318-11.842 2.318-5.089 6.752-8.465t10.631-5.089T73.88 19h8.667v6.55h-12.9ZM77.911 97q.1-5.24.1-10.43V19h13.807q0 5.14-.05 10.33t-.05 10.43v36.278q0 5.241.05 10.481T91.817 97Zm8.163-70.744V19h13.705v6.45l-12.194.806Z" class="mk" opacity=".35"/><path d="M63.647 79.62q-6.349-.1-11.74-1.864t-9.372-5.24q-3.98-3.477-6.147-8.617T34.22 52.11q0-6.752 2.318-11.842 2.318-5.089 6.752-8.465t10.631-5.089T67.88 25h8.667v6.55h-12.9ZM71.911 103q.1-5.24.1-10.43V25h13.807q0 5.14-.05 10.33t-.05 10.43v36.278q0 5.241.05 10.481t.05 10.481Zm8.163-70.744V25h13.705v6.45l-12.194.806Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Source Serif 4 <span class="tag">control</span></span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M82.005 31.352q-7.356 0-7.356 3.748L73.956 97H61.742V74.516h-.278q-12.352 0-20.68-6.87t-8.327-20.333q0-28.035 35.67-28.035l26.508-.14h2.36Q99.077 19 105.877 19l1.666 9.993q-8.744.971-11.103 1.457t-2.36 1.596v64.815H81.867Z" class="mk" opacity=".35"/><path d="M76.005 37.352q-7.356 0-7.356 3.748l-.693 61.9H55.742V80.516h-.278q-12.352 0-20.68-6.87t-8.327-20.333q0-28.035 35.67-28.035l26.508-.14h2.36Q93.077 25 99.877 25l1.666 9.993q-8.744.971-11.103 1.457t-2.36 1.596v64.815H75.867Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Lusitana</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M71.894 57.109q-7.827.252-13.213-2.44-5.386-2.694-8.164-7.07t-2.777-9.173q0-4.46 2.02-8.122 2.02-3.66 5.428-6.312 3.408-2.65 7.743-3.955 4.334-1.305 8.963-.968ZM77.616 97V19.49q3.535.168 6.775.505t7.869.841l-.168 2.525q-1.431-.084-3.493.084-2.062.169-3.577.59v70.609Z" class="mk" opacity=".35"/><path d="M65.894 63.109q-7.827.252-13.213-2.44-5.386-2.694-8.164-7.07t-2.777-9.173q0-4.46 2.02-8.122 2.02-3.66 5.428-6.312 3.408-2.65 7.743-3.955 4.334-1.305 8.963-.968ZM71.616 103V25.49q3.535.168 6.775.505t7.869.841l-.168 2.525q-1.431-.084-3.493.084-2.062.169-3.577.59v70.609Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Joan</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="m75.149 22.67-.969.052-1.937.102q-.968.05-.968.152l-.051 2.346q-.051 2.345-.153 6.117-.102 3.773-.204 8.157t-.204 8.463-.306 7.035q-1.632.612-3.467.918t-3.365.306q-6.321 0-10.298-2.855-3.976-2.855-5.862-7.24t-1.887-9.074q0-4.588 1.938-8.718 1.937-4.129 7.086-6.678t14.631-2.55H80.86q2.243 0 5.455-.101Q89.525 19 93.706 19q.51 0 .663.459t.153.968q0 1.938-.816 1.938h-5.914q-.408 0-.917.611-.51.612-.867 2.499-.357 1.886-.357 5.862v24.369q0 7.24-.51 13.357t-2.243 10.4q-2.04 4.894-5.659 8.87-3.62 3.977-8.412 6.322T58.325 97q-.713 0-1.988-.255t-2.345-1.07-1.07-2.346q0-3.874 4.486-5.607 2.243 1.325 5.098 1.988t4.69.663q1.937 0 3.059-.918 1.121-.918 1.835-2.243 1.02-2.141 1.632-6.22t.917-8.768.408-8.922.102-6.678Z" class="mk" opacity=".35"/><path d="m69.149 28.67-.969.052-1.937.102q-.968.05-.968.152l-.051 2.346q-.051 2.345-.153 6.117-.102 3.773-.204 8.157t-.204 8.463-.306 7.035q-1.632.612-3.467.918t-3.365.306q-6.321 0-10.298-2.855-3.976-2.855-5.862-7.24t-1.887-9.074q0-4.588 1.938-8.718 1.937-4.129 7.086-6.678t14.631-2.55H74.86q2.243 0 5.455-.101Q83.525 25 87.706 25q.51 0 .663.459t.153.968q0 1.938-.816 1.938h-5.914q-.408 0-.917.611-.51.612-.867 2.499-.357 1.886-.357 5.862v24.369q0 7.24-.51 13.357t-2.243 10.4q-2.04 4.894-5.659 8.87-3.62 3.977-8.412 6.322T52.325 103q-.713 0-1.988-.255t-2.345-1.07-1.07-2.346q0-3.874 4.486-5.607 2.243 1.325 5.098 1.988t4.69.663q1.937 0 3.059-.918 1.121-.918 1.835-2.243 1.02-2.141 1.632-6.22t.917-8.768.408-8.922.102-6.678Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Sedan SC</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M61.136 97v-5.698l12.41-3.292V19.253h26.21v5.445l-10.383 3.419v60.02l10.383 3.292V97Zm3.926-28.11q-7.978 0-13.549-3.42-5.571-3.418-8.42-9.116t-2.85-12.536q0-6.964 2.85-12.536t8.42-8.926T65.062 19h1.393q.38 0 1.266.127v49.636q-.633.127-1.14.127z" class="mk" opacity=".35"/><path d="M55.136 103v-5.698l12.41-3.292V25.253h26.21v5.445l-10.383 3.419v60.02l10.383 3.292V103Zm3.926-28.11q-7.978 0-13.549-3.42-5.571-3.418-8.42-9.116t-2.85-12.536q0-6.964 2.85-12.536t8.42-8.926T59.062 25h1.393q.38 0 1.266.127v49.636q-.633.127-1.14.127z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Manuale</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M66.88 97V65.354h-2.897q-6.909 0-12.257-2.953-5.349-2.952-8.357-8.022-3.009-5.07-3.009-11.533v-1.337q0-6.686 3.12-11.756t8.636-7.912T64.65 19h34.99v78H87.606V30.366h-8.692V97Zm-3.566-43.011h3.566V30.366h-3.566q-4.791 0-7.855 3.12t-3.065 8.357v.668q0 5.238 3.232 8.358 3.231 3.12 7.688 3.12" class="mk" opacity=".35"/><path d="M60.88 103V71.354h-2.897q-6.909 0-12.257-2.953-5.349-2.952-8.357-8.022-3.009-5.07-3.009-11.533v-1.337q0-6.686 3.12-11.756t8.636-7.912T58.65 25h34.99v78H81.606V36.366h-8.692V103Zm-3.566-43.011h3.566V36.366h-3.566q-4.791 0-7.855 3.12t-3.065 8.357v.668q0 5.238 3.232 8.358 3.231 3.12 7.688 3.12" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Space Grotesk</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M62.923 97V64.605h-1.887q-6.29 0-11.4-3.067-5.112-3.066-8.178-8.256t-3.067-11.48 3.067-11.48q3.066-5.189 8.177-8.255T61.036 19h40.573v78H84.625V35.04h-4.718V97Zm-1.887-48.435h1.887V35.04h-1.887q-2.516 0-4.56 1.652-2.045 1.65-2.045 5.11t2.045 5.111q2.044 1.652 4.56 1.652" class="mk" opacity=".35"/><path d="M56.923 103V70.605h-1.887q-6.29 0-11.4-3.067-5.112-3.066-8.178-8.256t-3.067-11.48 3.067-11.48q3.066-5.189 8.177-8.255T55.036 25H95.61v78H78.625V41.04h-4.718V103Zm-1.887-48.435h1.887V41.04h-1.887q-2.516 0-4.56 1.652-2.045 1.65-2.045 5.11t2.045 5.111q2.044 1.652 4.56 1.652" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Space Mono</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M75.087 48.109v-5.37h-6.783q-1.413 0-2.402.707-.989.706-.989 1.742 0 2.92 3.391 2.92Zm-13.565-2.92q0-2.403 2.002-4.122 2.001-1.72 4.78-1.72h10.174V93.61h3.392V35.957H68.304q-3.956 0-7.065 2.826t-3.109 6.405q0 4.616 2.968 7.16 2.967 2.543 7.206 2.543h6.783V51.5h-6.783q-6.782 0-6.782-6.312m33.913 48.42V22.39h-27.13q-6.312 0-11.8 3.133-5.487 3.132-8.713 8.407-3.227 5.276-3.227 11.257 0 6.5 3.25 11.87t8.69 8.384 11.8 3.015h6.782v-3.392h-6.783q-8.337 0-14.342-5.7-6.005-5.698-6.005-14.177 0-7.771 6.076-13.588t14.271-5.817h23.74v67.826ZM85.26 97H75.087V71.848h-6.783q-5.51 0-10.433-1.837-4.922-1.837-8.643-5.205-3.72-3.368-5.887-8.455t-2.167-11.163q0-5.18 2.19-10.009 2.19-4.828 5.864-8.384t8.69-5.675T68.304 19h30.522v78H88.652V29.174H68.304q-6.782 0-11.87 4.828-5.086 4.828-5.086 11.186 0 7.254 4.993 11.87 4.992 4.616 11.963 4.616h6.783v-3.391h-6.783q-5.652 0-9.608-3.557t-3.957-9.538q0-4.992 4.074-8.808 4.075-3.815 9.491-3.815h16.957Z" class="mk" opacity=".35"/><path d="M69.087 54.109v-5.37h-6.783q-1.413 0-2.402.707-.989.706-.989 1.742 0 2.92 3.391 2.92Zm-13.565-2.92q0-2.403 2.002-4.122 2.001-1.72 4.78-1.72h10.174V99.61h3.392V41.957H62.304q-3.956 0-7.065 2.826t-3.109 6.405q0 4.616 2.968 7.16 2.967 2.543 7.206 2.543h6.783V57.5h-6.783q-6.782 0-6.782-6.312m33.913 48.42V28.39h-27.13q-6.312 0-11.8 3.133-5.487 3.132-8.713 8.407-3.227 5.276-3.227 11.257 0 6.5 3.25 11.87t8.69 8.384 11.8 3.015h6.782v-3.392h-6.783q-8.337 0-14.342-5.7-6.005-5.698-6.005-14.177 0-7.771 6.076-13.588t14.271-5.817h23.74v67.826ZM79.26 103H69.087V77.848h-6.783q-5.51 0-10.433-1.837-4.922-1.837-8.643-5.205-3.72-3.368-5.887-8.455t-2.167-11.163q0-5.18 2.19-10.009 2.19-4.828 5.864-8.384t8.69-5.675T62.304 25h30.522v78H82.652V35.174H62.304q-6.782 0-11.87 4.828-5.086 4.828-5.086 11.186 0 7.254 4.993 11.87 4.992 4.616 11.963 4.616h6.783v-3.391h-6.783q-5.652 0-9.608-3.557t-3.957-9.538q0-4.992 4.074-8.808 4.075-3.815 9.491-3.815h16.957Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Monoton</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M72.883 97q-2.205 0-3.73-1.696-1.527-1.695-1.527-4.07v-22.55h-3.222q-7.97 0-14.158-3.222-6.19-3.222-9.75-8.902-3.561-5.68-3.561-12.802 0-7.292 3.56-12.803 3.562-5.51 9.75-8.732Q56.436 19 64.406 19H97.64q5.426 0 5.426 5.426 0 2.374-1.526 3.73-1.526 1.357-3.9 1.357h-2.713v61.383q0 2.713-1.441 4.408T89.67 97t-3.9-1.61q-1.527-1.612-1.527-4.155V29.513H78.31v61.383q0 2.713-1.526 4.408T72.883 97m-8.479-67.487q-7.46 0-12.039 3.815t-4.578 10.259T52.45 54.27t11.954 4.239h3.222V29.513Z" class="mk" opacity=".35"/><path d="M66.883 103q-2.205 0-3.73-1.696-1.527-1.695-1.527-4.07v-22.55h-3.222q-7.97 0-14.158-3.222-6.19-3.222-9.75-8.902-3.561-5.68-3.561-12.802 0-7.292 3.56-12.803 3.562-5.51 9.75-8.732Q50.436 25 58.406 25H91.64q5.426 0 5.426 5.426 0 2.374-1.526 3.73-1.526 1.357-3.9 1.357h-2.713v61.383q0 2.713-1.441 4.408T83.67 103t-3.9-1.61q-1.527-1.612-1.527-4.155V35.513H72.31v61.383q0 2.713-1.526 4.408t-3.9 1.696m-8.479-67.487q-7.46 0-12.039 3.815t-4.578 10.259T46.45 60.27t11.954 4.239h3.222V35.513Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Dongle</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M95.06 91.243q0 2.822 1.523 4.29Q98.107 97 100.14 97t3.556-1.467 1.524-4.29V34.69q0-3.838-.283-6.547-.282-2.709-1.185-4.515t-2.935-2.822-5.418-1.41-8.58-.396H60.067q-5.532 0-10.16 1.806t-8.014 5.136-5.249 7.732-1.863 9.708 1.976 9.708 5.362 7.62q3.386 3.216 7.676 4.966 4.289 1.75 8.804 1.75 3.725 0 7.394-1.016t6.66-2.935q2.991-1.92 4.797-4.685t1.806-6.265V32.771q0-2.257-1.016-3.668T75.7 27.24t-3.047.057-2.54 1.862-1.016 3.612v58.472q0 2.822 1.524 4.29T74.177 97t3.555-1.467 1.524-4.29V32.771q0-2.257-1.016-3.668T75.7 27.24t-3.047.057-2.54 1.862-1.016 3.612v19.754q0 1.242-.903 2.145t-2.37 1.467-3.33.847-3.895.282q-3.5 0-6.603-1.75-3.105-1.749-5.08-4.91t-1.975-7.224q0-4.29 1.919-7.506 1.919-3.218 5.361-4.967 3.443-1.75 7.846-1.75H85.69q3.612 0 5.588.057 1.975.056 2.765.564t.903 1.919.113 4.12v55.424" class="mk" opacity=".35"/><path d="M89.06 97.243q0 2.822 1.523 4.29Q92.107 103 94.14 103t3.556-1.467 1.524-4.29V40.69q0-3.838-.283-6.547-.282-2.709-1.185-4.515t-2.935-2.822-5.418-1.41-8.58-.396H54.067q-5.532 0-10.16 1.806t-8.014 5.136-5.249 7.732-1.863 9.708 1.976 9.708 5.362 7.62q3.386 3.216 7.676 4.966 4.289 1.75 8.804 1.75 3.725 0 7.394-1.016t6.66-2.935q2.991-1.92 4.797-4.685t1.806-6.265V38.771q0-2.257-1.016-3.668T69.7 33.24t-3.047.057-2.54 1.862-1.016 3.612v58.472q0 2.822 1.524 4.29T68.177 103t3.555-1.467 1.524-4.29V38.771q0-2.257-1.016-3.668T69.7 33.24t-3.047.057-2.54 1.862-1.016 3.612v19.754q0 1.242-.903 2.145t-2.37 1.467-3.33.847-3.895.282q-3.5 0-6.603-1.75-3.105-1.749-5.08-4.91t-1.975-7.224q0-4.29 1.919-7.506 1.919-3.218 5.361-4.967 3.443-1.75 7.846-1.75H79.69q3.612 0 5.588.057 1.975.056 2.765.564t.903 1.919.113 4.12v55.424" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Tilt Neon</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M74.505 19v78h-8.624L62.02 58q-9.525-.257-15.124-4.955t-5.599-14.288 5.663-14.673T63.178 19Zm7.851 78V19h16.347L90.98 97Z" class="mk" opacity=".35"/><path d="M68.505 25v78h-8.624L56.02 64q-9.525-.257-15.124-4.955t-5.599-14.288 5.663-14.673T57.178 25Zm7.851 78V25h16.347l-7.723 78Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Wendy One</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M65.363 97V55.877q-5.07-.174-8.666-1.864t-5.85-4.355-3.315-5.828-1.062-6.283q0-4.55 1.928-8.819 1.929-4.268 6.349-6.998T66.663 19H93.53v65.347l-10.79 4.94V29.443h-6.543v62.66Z" class="mk" opacity=".35"/><path d="M59.363 103V61.877q-5.07-.174-8.666-1.864t-5.85-4.355-3.315-5.828-1.062-6.283q0-4.55 1.928-8.819 1.929-4.268 6.349-6.998T60.663 25H87.53v65.347l-10.79 4.94V35.443h-6.543v62.66Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Overpass</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M66.273 97V55.833q-5.286-.13-9.013-1.82t-6.045-4.376-3.38-5.872-1.062-6.305q0-4.55 1.907-8.797 1.907-4.246 6.283-6.955T66.793 19h26.434v66.04l-10.054 4.593V28.62H76.24v63.873Z" class="mk" opacity=".35"/><path d="M60.273 103V61.833q-5.286-.13-9.013-1.82t-6.045-4.376-3.38-5.872-1.062-6.305q0-4.55 1.907-8.797 1.907-4.246 6.283-6.955T60.793 25h26.434v66.04l-10.054 4.593V34.62H70.24v63.873Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Overpass Mono</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="m101.711 95.727-9.826-.407.152-20.62q-3.513.713-6.695.967-3.182.255-5.83.356L79.208 97l-10.743-.407.408-21.079q-3.615-.509-7.23-1.45-3.615-.943-6.95-2.445t-6.237-3.564-5.091-4.785-3.539-6.161-1.502-7.663q-.254-6.16 1.375-10.819 1.63-4.658 4.506-8.044t6.67-5.626 7.866-3.564 8.095-1.858Q70.857 19 74.167 19q3.92.102 8.4.611 3.819.458 8.783 1.375 4.964.916 10.361 2.698ZM48.863 46.952q0 3.31 1.17 6.338 1.172 3.03 3.615 5.525 2.444 2.494 6.263 4.302t9.164 2.673l.713-36.25q-4.633.56-8.477 2.01-3.844 1.451-6.619 3.692T50.39 40.46t-1.527 6.492m30.853 19.602q2.75 0 5.983-.28t6.44-.993l.306-33.553q-2.902-1.018-6.135-1.527-3.233-.51-5.983-.764Z" class="mk" opacity=".35"/><path d="m95.711 101.727-9.826-.407.152-20.62q-3.513.713-6.695.967-3.182.255-5.83.356L73.208 103l-10.743-.407.408-21.079q-3.615-.509-7.23-1.45-3.615-.943-6.95-2.445t-6.237-3.564-5.091-4.785-3.539-6.161-1.502-7.663q-.254-6.16 1.375-10.819 1.63-4.658 4.506-8.044t6.67-5.626 7.866-3.564 8.095-1.858Q64.857 25 68.167 25q3.92.102 8.4.611 3.819.458 8.783 1.375 4.964.916 10.361 2.698ZM42.863 52.952q0 3.31 1.17 6.338 1.172 3.03 3.615 5.525 2.444 2.494 6.263 4.302t9.164 2.673l.713-36.25q-4.633.56-8.477 2.01-3.844 1.451-6.619 3.692T44.39 46.46t-1.527 6.492m30.853 19.602q2.75 0 5.983-.28t6.44-.993l.306-33.553q-2.902-1.018-6.135-1.527-3.233-.51-5.983-.764Z" class="mk"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">McLaren</span><span class="meta">weight 400</span></div>
+    </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>Plate</h2>
+      <p>Knocked out of a heavy square plate with an inset rule.</p>
+    </div>
+    <div class="row">
+      <div class="cell control">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-source-serif-4"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M63.702 77.217q-5.373-.085-9.935-1.577-4.562-1.493-7.93-4.435t-5.201-7.29-1.834-9.977q0-5.713 1.962-10.02 1.96-4.306 5.713-7.162 3.752-2.857 8.996-4.306Q60.717 31 67.283 31h7.333v5.543H63.702ZM70.694 97q.085-4.434.085-8.826V31h11.682q0 4.349-.042 8.74-.043 4.392-.043 8.826v30.698q0 4.434.043 8.868T82.46 97ZM77.6 37.14V31h11.597v5.457l-10.318.683Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-source-serif-4)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Source Serif 4 <span class="tag">control</span></span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-lusitana"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M74.158 41.452q-6.224 0-6.224 3.17L67.347 97H57.012V77.975h-.234q-10.452 0-17.499-5.813t-7.046-17.205q0-23.722 30.182-23.722l22.43-.118h1.997Q88.603 31 94.358 31l1.409 8.456q-7.399.822-9.395 1.233-1.997.41-1.997 1.35v54.844H74.041Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-lusitana)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Lusitana</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-joan"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M65.602 63.246q-6.622.214-11.18-2.065t-6.907-5.982-2.35-7.762q0-3.774 1.709-6.872t4.593-5.34q2.884-2.244 6.551-3.348t7.584-.819ZM70.445 97V31.414q2.99.143 5.732.428t6.658.712l-.142 2.136q-1.21-.071-2.955.071-1.745.143-3.027.499v59.746Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-joan)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Joan</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-sedan-sc"><path fill="#fff" d="M0 0h128v128H0z"/><path d="m68.357 34.106-.82.043-1.639.086q-.82.043-.82.13l-.043 1.984q-.043 1.984-.13 5.176-.085 3.193-.172 6.902t-.172 7.161q-.086 3.451-.259 5.953-1.38.518-2.933.777-1.553.258-2.847.258-5.35 0-8.714-2.415t-4.96-6.126-1.597-7.678q0-3.882 1.64-7.377 1.638-3.494 5.995-5.65t12.38-2.157h9.922q1.898 0 4.616-.087Q80.522 31 84.059 31q.431 0 .56.388t.13.82q0 1.64-.69 1.64h-5.004q-.345 0-.777.517-.43.517-.733 2.113-.302 1.597-.302 4.961v20.62q0 6.125-.431 11.302-.432 5.176-1.898 8.8-1.726 4.141-4.789 7.506-3.062 3.364-7.117 5.349Q58.953 97 54.122 97q-.604 0-1.683-.216-1.078-.215-1.984-.906-.906-.69-.906-1.984 0-3.278 3.796-4.745 1.898 1.122 4.314 1.682 2.416.561 3.968.561 1.64 0 2.589-.776.949-.777 1.553-1.898.862-1.812 1.38-5.263t.776-7.42q.26-3.968.346-7.549.086-3.58.086-5.65Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-sedan-sc)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Sedan SC</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-manuale"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M56.5 97v-4.821L67 89.393V31.214h22.179v4.607l-8.786 2.893V89.5l8.786 2.786V97Zm3.321-23.786q-6.75 0-11.464-2.893t-7.125-7.714T38.822 52q0-5.893 2.41-10.607t7.125-7.554T59.821 31H61q.321 0 1.071.107v42q-.535.107-.964.107z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-manuale)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Manuale</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-space-grotesk"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M61.36 97V70.223h-2.451q-5.846 0-10.372-2.499t-7.071-6.788-2.546-9.759v-1.131q0-5.657 2.64-9.947t7.307-6.695T59.474 31H89.08v66H78.897V40.617h-7.354V97Zm-3.017-36.394h3.017V40.617h-3.017q-4.054 0-6.647 2.64t-2.593 7.072v.565q0 4.432 2.734 7.072t6.506 2.64"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-space-grotesk)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Space Grotesk</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-space-mono"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M58.012 97V69.589h-1.597q-5.322 0-9.647-2.595-4.324-2.595-6.92-6.986-2.594-4.391-2.594-9.714 0-5.322 2.595-9.713t6.92-6.986T56.414 31h34.331v66h-14.37V44.573h-3.992V97Zm-1.597-40.984h1.597V44.573h-1.597q-2.129 0-3.859 1.397t-1.73 4.324 1.73 4.325 3.86 1.397"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-space-mono)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Space Mono</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-monoton"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M68.304 55.63v-4.543h-5.739q-1.195 0-2.032.598t-.837 1.474q0 2.471 2.87 2.471Zm-11.478-2.47q0-2.033 1.694-3.488t4.045-1.455h8.609V94.13h2.87V45.348h-11.48q-3.348 0-5.978 2.391t-2.63 5.42q0 3.906 2.51 6.058 2.511 2.153 6.098 2.153h5.74V58.5h-5.74q-5.739 0-5.739-5.34m28.696 40.97V33.87H62.565q-5.34 0-9.983 2.65t-7.374 7.114-2.73 9.525q0 5.5 2.75 10.044 2.75 4.543 7.354 7.094 4.603 2.55 9.983 2.55h5.74v-2.869h-5.74q-7.054 0-12.136-4.822-5.081-4.823-5.081-11.997 0-6.576 5.141-11.498t12.076-4.922h20.087V94.13ZM76.913 97h-8.609V75.717h-5.739q-4.663 0-8.828-1.554t-7.313-4.404-4.982-7.154-1.833-9.446q0-4.384 1.853-8.469t4.962-7.094 7.353-4.803T62.565 31h25.826v66h-8.608V39.609H62.565q-5.739 0-10.043 4.085-4.305 4.085-4.305 9.465 0 6.138 4.225 10.044t10.123 3.906h5.74v-2.87h-5.74q-4.782 0-8.13-3.009t-3.348-8.07q0-4.225 3.447-7.453t8.031-3.229h14.348Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-monoton)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Monoton</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-dongle"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M66.44 97q-1.866 0-3.157-1.435-1.292-1.435-1.292-3.443V73.039h-2.726q-6.743 0-11.98-2.726t-8.25-7.533-3.013-10.832q0-6.17 3.013-10.833t8.25-7.389T59.265 31h28.122q4.591 0 4.591 4.591 0 2.009-1.291 3.157t-3.3 1.148h-2.296v51.939q0 2.295-1.22 3.73T80.644 97t-3.3-1.363q-1.29-1.363-1.29-3.515V39.896H71.03v51.939q0 2.295-1.29 3.73Q68.447 97 66.44 97m-7.175-57.104q-6.313 0-10.187 3.228t-3.874 8.68 3.946 9.04 10.115 3.586h2.726V39.896Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-dongle)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Dongle</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-tilt-neon"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M85.204 92.129q0 2.388 1.29 3.63Q87.782 97 89.501 97t3.009-1.242q1.29-1.241 1.29-3.63V44.277q0-3.247-.24-5.54-.238-2.292-1.002-3.82t-2.484-2.388-4.584-1.194T78.23 31H55.596q-4.68 0-8.596 1.528t-6.782 4.346-4.441 6.543T34.2 51.63t1.671 8.214 4.537 6.447 6.495 4.203 7.45 1.48q3.152 0 6.256-.86 3.104-.859 5.636-2.483 2.53-1.623 4.059-3.963 1.528-2.34 1.528-5.301V42.653q0-1.91-.86-3.105-.86-1.193-2.149-1.575-1.289-.383-2.578.047-1.29.43-2.15 1.576t-.86 3.057v49.476q0 2.388 1.29 3.63T67.534 97t3.009-1.242 1.29-3.63V42.654q0-1.91-.86-3.105-.86-1.193-2.15-1.575-1.289-.383-2.578.047-1.29.43-2.15 1.576t-.86 3.057v16.715q0 1.05-.763 1.814-.764.764-2.006 1.242t-2.818.716q-1.576.24-3.295.24-2.96 0-5.587-1.481-2.627-1.48-4.299-4.155-1.671-2.675-1.671-6.113 0-3.63 1.624-6.352 1.623-2.722 4.537-4.202t6.638-1.48h21.681q3.057 0 4.728.047 1.672.048 2.34.478.669.43.765 1.623t.095 3.487z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-tilt-neon)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Tilt Neon</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-wendy-one"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M67.812 31v66h-7.297l-3.267-33q-8.06-.218-12.798-4.193t-4.737-12.09q0-8.113 4.792-12.415T58.228 31Zm6.643 66V31h13.832l-6.535 66Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-wendy-one)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Wendy One</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-overpass"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M60.077 97V62.203q-4.29-.146-7.334-1.576t-4.95-3.685-2.805-4.932-.898-5.317q0-3.85 1.632-7.461t5.371-5.922T61.177 31H83.91v55.293l-9.13 4.18V39.837h-5.537v53.02Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-overpass)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Overpass</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-overpass-mono"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M60.847 97V62.167q-4.474-.11-7.627-1.54t-5.115-3.704-2.86-4.968-.898-5.335q0-3.85 1.613-7.443 1.613-3.594 5.317-5.885Q54.98 31 61.287 31h22.366v55.88l-8.506 3.887V39.14H69.28v54.047Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-overpass-mono)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Overpass Mono</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-mclaren"><path fill="#fff" d="M0 0h128v128H0z"/><path d="m90.832 95.923-8.314-.345.13-17.447q-2.974.603-5.666.818t-4.933.302L71.791 97l-9.09-.345.344-17.835q-3.059-.431-6.117-1.228-3.059-.797-5.88-2.068-2.823-1.27-5.278-3.016-2.456-1.744-4.308-4.05-1.853-2.304-2.994-5.212t-1.271-6.484q-.216-5.212 1.163-9.154 1.378-3.942 3.813-6.807 2.434-2.865 5.643-4.76 3.21-1.896 6.656-3.016 3.447-1.12 6.85-1.573T67.526 31q3.317.086 7.108.517 3.231.388 7.431 1.163 4.2.776 8.767 2.283ZM46.114 54.651q0 2.8.991 5.364t3.059 4.674 5.299 3.64 7.755 2.262l.603-30.673q-3.92.474-7.173 1.701t-5.6 3.124q-2.349 1.895-3.641 4.416-1.293 2.52-1.293 5.492m26.107 16.587q2.327 0 5.062-.237t5.45-.84l.259-28.39q-2.456-.862-5.192-1.293-2.735-.431-5.062-.646Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-mclaren)" rx="6"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" class="mk-stroke" rx="3"/><style>.mk{fill:#000}.mk-stroke{fill:none;stroke:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}.mk-stroke{stroke:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">McLaren</span><span class="meta">weight 400</span></div>
+    </div>
+    </div>
+  </section>

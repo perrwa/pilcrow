@@ -1,0 +1,266 @@
+<title>Pilcrow Marks</title>
+<style>
+  :root {
+    --bg: #f5f3ef;
+    --panel: #ffffff;
+    --ink: #1a1612;
+    --ink-soft: #706860;
+    --border: #ded6ca;
+    --accent: #2c3e63;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    --serif: Charter, Georgia, 'Times New Roman', serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14120f;
+      --panel: #1e1b17;
+      --ink: #e8e2d7;
+      --ink-soft: #96897d;
+      --border: #332e27;
+      --accent: #9ab2e0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    margin: 0;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  header {
+    max-width: 1180px;
+    margin: 0 auto 2.5rem;
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: -0.01em;
+  }
+  header p {
+    color: var(--ink-soft);
+    margin: 0;
+    font-size: 0.95rem;
+    max-width: 60ch;
+    line-height: 1.5;
+  }
+  .grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem 1.3rem;
+  }
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.9rem;
+  }
+  .card-head .num {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.02em;
+  }
+  .card-head .theme {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  h2 {
+    font-size: 1.05rem;
+    margin: 0 0 0.6rem;
+    font-weight: 600;
+  }
+  .swatches {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+  }
+  .swatch {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+  }
+  .swatch.light { background: #fdfcfa; }
+  .swatch.dark { background: #14120f; }
+  .swatch.big { height: 132px; }
+  .swatch.big svg { width: 84px; height: 84px; }
+  .sizes {
+    display: flex;
+    gap: 0.6rem;
+  }
+  .sizes .swatch { height: 60px; }
+  .sizes .swatch svg.sz32 { width: 32px; height: 32px; }
+  .sizes .swatch svg.sz16 { width: 16px; height: 16px; }
+  .size-label {
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-top: 0.3rem;
+  }
+  .note {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    line-height: 1.45;
+    margin-top: 0.8rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--border);
+  }
+  .note b { color: var(--ink); font-weight: 600; }
+  .flag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  .flag.ok { background: rgba(70,140,90,0.15); color: #3a7a4e; }
+  .flag.warn { background: rgba(190,130,40,0.18); color: #a56a1e; }
+  @media (prefers-color-scheme: dark) {
+    .flag.ok { color: #7fcf96; }
+    .flag.warn { color: #e0a34f; }
+  }
+</style>
+
+<header>
+  <h1>¶ — 9 mono options</h1>
+  <p>Built from the site's actual Source Serif 4 subsets (fontkitten glyph extraction, not a redrawn approximation). All transparent, all flip black/white with system dark mode. Brandmark-first: 128px is the primary size, 32px/16px show favicon behavior for reference.</p>
+</header>
+
+<div class="grid">
+
+  <div class="card">
+    <div class="card-head"><h2>01 — sumi</h2><span class="theme">Japanese minimalism</span></div>
+    <div class="swatches">
+      <div class="swatch light big"><svg viewBox="0 0 128 128"><path d="M66.358 76.403q-6.766 0-12.3-1.897-5.535-1.896-9.43-5.432t-5.997-8.508-2.101-11.019q0-6.252 2.306-11.172t6.611-8.354 10.302-5.227T69.227 23h8.098v5.638H66.357ZM73.84 105q.102-5.228.102-10.506V23h8.2q-.102 5.227-.153 10.506t-.052 10.609v39.668q0 5.33.052 10.608.051 5.279.153 10.609Zm4.305-75.85V23H91.47v5.33l-12.197.82Z" fill="#1a1612"/></svg></div>
+      <div class="swatch dark big"><svg viewBox="0 0 128 128"><path d="M66.358 76.403q-6.766 0-12.3-1.897-5.535-1.896-9.43-5.432t-5.997-8.508-2.101-11.019q0-6.252 2.306-11.172t6.611-8.354 10.302-5.227T69.227 23h8.098v5.638H66.357ZM73.84 105q.102-5.228.102-10.506V23h8.2q-.102 5.227-.153 10.506t-.052 10.609v39.668q0 5.33.052 10.608.051 5.279.153 10.609Zm4.305-75.85V23H91.47v5.33l-12.197.82Z" fill="#e8e2d7"/></svg></div>
+    </div>
+    <div class="sizes">
+      <div class="swatch light" style="flex:1"><svg class="sz32" viewBox="0 0 128 128"><path d="M66.358 76.403q-6.766 0-12.3-1.897-5.535-1.896-9.43-5.432t-5.997-8.508-2.101-11.019q0-6.252 2.306-11.172t6.611-8.354 10.302-5.227T69.227 23h8.098v5.638H66.357ZM73.84 105q.102-5.228.102-10.506V23h8.2q-.102 5.227-.153 10.506t-.052 10.609v39.668q0 5.33.052 10.608.051 5.279.153 10.609Zm4.305-75.85V23H91.47v5.33l-12.197.82Z" fill="#1a1612"/></svg></div>
+      <div class="swatch light" style="flex:1"><svg class="sz16" viewBox="0 0 128 128"><path d="M66.358 76.403q-6.766 0-12.3-1.897-5.535-1.896-9.43-5.432t-5.997-8.508-2.101-11.019q0-6.252 2.306-11.172t6.611-8.354 10.302-5.227T69.227 23h8.098v5.638H66.357ZM73.84 105q.102-5.228.102-10.506V23h8.2q-.102 5.227-.153 10.506t-.052 10.609v39.668q0 5.33.052 10.608.051 5.279.153 10.609Zm4.305-75.85V23H91.47v5.33l-12.197.82Z" fill="#1a1612"/></svg></div>
+    </div>
+    <div class="note">The letterform alone, optically centered. Baseline for judging the other 8. <span class="flag ok">16px OK</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>02 — ma</h2><span class="theme">Japanese minimalism</span></div>
+    <div class="swatches">
+      <div class="swatch light big"><svg viewBox="0 0 128 128"><path stroke-width="1.5" d="M14 104h100" stroke="#1a1612" fill="none"/><path d="M83.955 88.285q-5.61 0-10.2-1.572t-7.82-4.505-4.973-7.055-1.742-9.138q0-5.185 1.913-9.265 1.912-4.08 5.482-6.928t8.543-4.335T86.334 44h6.715v4.675h-9.095ZM90.16 112q.085-4.335.085-8.712V44h6.8q-.085 4.335-.127 8.712-.043 4.378-.043 8.798v32.895q0 4.42.043 8.798.042 4.377.127 8.797Zm3.57-62.9V44h11.05v4.42l-10.115.68Z" fill="#1a1612"/></svg></div>
+      <div class="swatch dark big"><svg viewBox="0 0 128 128"><path stroke-width="1.5" d="M14 104h100" stroke="#e8e2d7" fill="none"/><path d="M83.955 88.285q-5.61 0-10.2-1.572t-7.82-4.505-4.973-7.055-1.742-9.138q0-5.185 1.913-9.265 1.912-4.08 5.482-6.928t8.543-4.335T86.334 44h6.715v4.675h-9.095ZM90.16 112q.085-4.335.085-8.712V44h6.8q-.085 4.335-.127 8.712-.043 4.378-.043 8.798v32.895q0 4.42.043 8.798.042 4.377.127 8.797Zm3.57-62.9V44h11.05v4.42l-10.115.68Z" fill="#e8e2d7"/></svg></div>
+    </div>
+    <div class="sizes">
+      <div class="swatch light" style="flex:1"><svg class="sz32" viewBox="0 0 128 128"><path stroke-width="1.5" d="M14 104h100" stroke="#1a1612" fill="none"/><path d="M83.955 88.285q-5.61 0-10.2-1.572t-7.82-4.505-4.973-7.055-1.742-9.138q0-5.185 1.913-9.265 1.912-4.08 5.482-6.928t8.543-4.335T86.334 44h6.715v4.675h-9.095ZM90.16 112q.085-4.335.085-8.712V44h6.8q-.085 4.335-.127 8.712-.043 4.378-.043 8.798v32.895q0 4.42.043 8.798.042 4.377.127 8.797Zm3.57-62.9V44h11.05v4.42l-10.115.68Z" fill="#1a1612"/></svg></div>
+      <div class="swatch light" style="flex:1"><svg class="sz16" viewBox="0 0 128 128"><path stroke-width="1.5" d="M14 104h100" stroke="#1a1612" fill="none"/><path d="M83.955 88.285q-5.61 0-10.2-1.572t-7.82-4.505-4.973-7.055-1.742-9.138q0-5.185 1.913-9.265 1.912-4.08 5.482-6.928t8.543-4.335T86.334 44h6.715v4.675h-9.095ZM90.16 112q.085-4.335.085-8.712V44h6.8q-.085 4.335-.127 8.712-.043 4.378-.043 8.798v32.895q0 4.42.043 8.798.042 4.377.127 8.797Zm3.57-62.9V44h11.05v4.42l-10.115.68Z" fill="#1a1612"/></svg></div>
+    </div>
+    <div class="note">Glyph pushed to lower-right, one hairline rule at the baseline. Negative space is the subject — reads as intentional, not off-center, once you see the rule. <span class="flag warn">brandmark only</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>03 — hanko</h2><span class="theme">Japanese minimalism</span></div>
+    <div class="swatches">
+      <div class="swatch light big"><svg viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" stroke-width="3" stroke="#1a1612" fill="none"/><path d="M65.783 73.378q-5.115 0-9.3-1.434t-7.13-4.108-4.534-6.432-1.589-8.332q0-4.727 1.744-8.447t4.999-6.316 7.788-3.953T67.952 33h6.123v4.262h-8.293ZM71.44 95q.078-3.953.078-7.944V33h6.2q-.078 3.953-.117 7.944-.038 3.991-.038 8.021v29.992q0 4.03.038 8.022.039 3.991.117 8.021Zm3.255-57.35V33H84.77v4.03l-9.222.62Z" fill="#1a1612"/></svg></div>
+      <div class="swatch dark big"><svg viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" stroke-width="3" stroke="#e8e2d7" fill="none"/><path d="M65.783 73.378q-5.115 0-9.3-1.434t-7.13-4.108-4.534-6.432-1.589-8.332q0-4.727 1.744-8.447t4.999-6.316 7.788-3.953T67.952 33h6.123v4.262h-8.293ZM71.44 95q.078-3.953.078-7.944V33h6.2q-.078 3.953-.117 7.944-.038 3.991-.038 8.021v29.992q0 4.03.038 8.022.039 3.991.117 8.021Zm3.255-57.35V33H84.77v4.03l-9.222.62Z" fill="#e8e2d7"/></svg></div>
+    </div>
+    <div class="sizes">
+      <div class="swatch light" style="flex:1"><svg class="sz32" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" stroke-width="3" stroke="#1a1612" fill="none"/><path d="M65.783 73.378q-5.115 0-9.3-1.434t-7.13-4.108-4.534-6.432-1.589-8.332q0-4.727 1.744-8.447t4.999-6.316 7.788-3.953T67.952 33h6.123v4.262h-8.293ZM71.44 95q.078-3.953.078-7.944V33h6.2q-.078 3.953-.117 7.944-.038 3.991-.038 8.021v29.992q0 4.03.038 8.022.039 3.991.117 8.021Zm3.255-57.35V33H84.77v4.03l-9.222.62Z" fill="#1a1612"/></svg></div>
+      <div class="swatch light" style="flex:1"><svg class="sz16" viewBox="0 0 128 128"><circle cx="64" cy="64" r="58" stroke-width="3" stroke="#1a1612" fill="none"/><path d="M65.783 73.378q-5.115 0-9.3-1.434t-7.13-4.108-4.534-6.432-1.589-8.332q0-4.727 1.744-8.447t4.999-6.316 7.788-3.953T67.952 33h6.123v4.262h-8.293ZM71.44 95q.078-3.953.078-7.944V33h6.2q-.078 3.953-.117 7.944-.038 3.991-.038 8.021v29.992q0 4.03.038 8.022.039 3.991.117 8.021Zm3.255-57.35V33H84.77v4.03l-9.222.62Z" fill="#1a1612"/></svg></div>
+    </div>
+    <div class="note">Glyph inside a thin seal ring — reads as a personal chop. Ring thins out at 16px but the silhouette still registers. <span class="flag ok">16px OK</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>04 — disc</h2><span class="theme">Midcentury modern</span></div>
+    <div class="swatches">
+      <div class="swatch light big"><svg viewBox="0 0 128 128"><mask id="m04a"><rect width="128" height="128" fill="#fff"/><path d="M65.955 74.285q-5.61 0-10.2-1.572t-7.82-4.505-4.973-7.055-1.742-9.138q0-5.185 1.913-9.265 1.912-4.08 5.482-6.928t8.542-4.335T68.336 30h6.715v4.675h-9.095ZM72.16 98q.085-4.335.085-8.712V30h6.8q-.085 4.335-.127 8.712-.043 4.378-.043 8.798v32.895q0 4.42.043 8.798.042 4.377.127 8.797Zm3.57-62.9V30h11.05v4.42l-10.115.68Z" fill="#000"/></mask><circle cx="64" cy="64" r="58" mask="url(#m04a)" fill="#1a1612"/></svg></div>
+      <div class="swatch dark big"><svg viewBox="0 0 128 128"><mask id="m04b"><rect width="128" height="128" fill="#fff"/><path d="M65.955 74.285q-5.61 0-10.2-1.572t-7.82-4.505-4.973-7.055-1.742-9.138q0-5.185 1.913-9.265 1.912-4.08 5.482-6.928t8.542-4.335T68.336 30h6.715v4.675h-9.095ZM72.16 98q.085-4.335.085-8.712V30h6.8q-.085 4.335-.127 8.712-.043 4.378-.043 8.798v32.895q0 4.42.043 8.798.042 4.377.127 8.797Zm3.57-62.9V30h11.05v4.42l-10.115.68Z" fill="#000"/></mask><circle cx="64" cy="64" r="58" mask="url(#m04b)" fill="#e8e2d7"/></svg></div>
+    </div>
+    <div class="sizes">
+      <div class="swatch light" style="flex:1"><svg class="sz32" viewBox="0 0 128 128"><mask id="m04c"><rect width="128" height="128" fill="#fff"/><path d="M65.955 74.285q-5.61 0-10.2-1.572t-7.82-4.505-4.973-7.055-1.742-9.138q0-5.185 1.913-9.265 1.912-4.08 5.482-6.928t8.542-4.335T68.336 30h6.715v4.675h-9.095ZM72.16 98q.085-4.335.085-8.712V30h6.8q-.085 4.335-.127 8.712-.043 4.378-.043 8.798v32.895q0 4.42.043 8.798.042 4.377.127 8.797Zm3.57-62.9V30h11.05v4.42l-10.115.68Z" fill="#000"/></mask><circle cx="64" cy="64" r="58" mask="url(#m04c)" fill="#1a1612"/></svg></div>
+      <div class="swatch light" style="flex:1"><svg class="sz16" viewBox="0 0 128 128"><mask id="m04d"><rect width="128" height="128" fill="#fff"/><path d="M65.955 74.285q-5.61 0-10.2-1.572t-7.82-4.505-4.973-7.055-1.742-9.138q0-5.185 1.913-9.265 1.912-4.08 5.482-6.928t8.542-4.335T68.336 30h6.715v4.675h-9.095ZM72.16 98q.085-4.335.085-8.712V30h6.8q-.085 4.335-.127 8.712-.043 4.378-.043 8.798v32.895q0 4.42.043 8.798.042 4.377.127 8.797Zm3.57-62.9V30h11.05v4.42l-10.115.68Z" fill="#000"/></mask><circle cx="64" cy="64" r="58" mask="url(#m04d)" fill="#1a1612"/></svg></div>
+    </div>
+    <div class="note">Glyph knocked out of a solid disc. Strongest, most ink-heavy silhouette in the set — coaster/seal geometry. <span class="flag ok">16px OK</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>05 — misregister</h2><span class="theme">Midcentury modern</span></div>
+    <div class="swatches">
+      <div class="swatch light big"><svg viewBox="0 0 128 128"><path d="M72.243 69.798q-6.435 0-11.7-1.804-5.266-1.804-8.97-5.168-3.706-3.363-5.704-8.092-1.999-4.729-1.999-10.481 0-5.948 2.194-10.628t6.288-7.946 9.8-4.973T74.971 19h7.703v5.363H72.243ZM79.36 97q.097-4.972.097-9.994V19h7.8q-.097 4.973-.146 9.994t-.049 10.091v37.733q0 5.07.05 10.09.048 5.022.145 10.092Zm4.095-72.15V19H96.13v5.07l-11.602.78Z" fill="#1a1612" opacity=".35"/><path d="M66.243 75.798q-6.435 0-11.7-1.804-5.266-1.804-8.97-5.168-3.706-3.363-5.704-8.092-1.999-4.729-1.999-10.481 0-5.948 2.194-10.628t6.288-7.946 9.8-4.973T68.971 25h7.703v5.363H66.243ZM73.36 103q.097-4.972.097-9.994V25h7.8q-.097 4.973-.146 9.994t-.049 10.091v37.733q0 5.07.05 10.09.048 5.022.145 10.092Zm4.095-72.15V25H90.13v5.07l-11.602.78Z" fill="#1a1612"/></svg></div>
+      <div class="swatch dark big"><svg viewBox="0 0 128 128"><path d="M72.243 69.798q-6.435 0-11.7-1.804-5.266-1.804-8.97-5.168-3.706-3.363-5.704-8.092-1.999-4.729-1.999-10.481 0-5.948 2.194-10.628t6.288-7.946 9.8-4.973T74.971 19h7.703v5.363H72.243ZM79.36 97q.097-4.972.097-9.994V19h7.8q-.097 4.973-.146 9.994t-.049 10.091v37.733q0 5.07.05 10.09.048 5.022.145 10.092Zm4.095-72.15V19H96.13v5.07l-11.602.78Z" fill="#e8e2d7" opacity=".35"/><path d="M66.243 75.798q-6.435 0-11.7-1.804-5.266-1.804-8.97-5.168-3.706-3.363-5.704-8.092-1.999-4.729-1.999-10.481 0-5.948 2.194-10.628t6.288-7.946 9.8-4.973T68.971 25h7.703v5.363H66.243ZM73.36 103q.097-4.972.097-9.994V25h7.8q-.097 4.973-.146 9.994t-.049 10.091v37.733q0 5.07.05 10.09.048 5.022.145 10.092Zm4.095-72.15V25H90.13v5.07l-11.602.78Z" fill="#e8e2d7"/></svg></div>
+    </div>
+    <div class="sizes">
+      <div class="swatch light" style="flex:1"><svg class="sz32" viewBox="0 0 128 128"><path d="M72.243 69.798q-6.435 0-11.7-1.804-5.266-1.804-8.97-5.168-3.706-3.363-5.704-8.092-1.999-4.729-1.999-10.481 0-5.948 2.194-10.628t6.288-7.946 9.8-4.973T74.971 19h7.703v5.363H72.243ZM79.36 97q.097-4.972.097-9.994V19h7.8q-.097 4.973-.146 9.994t-.049 10.091v37.733q0 5.07.05 10.09.048 5.022.145 10.092Zm4.095-72.15V19H96.13v5.07l-11.602.78Z" fill="#1a1612" opacity=".35"/><path d="M66.243 75.798q-6.435 0-11.7-1.804-5.266-1.804-8.97-5.168-3.706-3.363-5.704-8.092-1.999-4.729-1.999-10.481 0-5.948 2.194-10.628t6.288-7.946 9.8-4.973T68.971 25h7.703v5.363H66.243ZM73.36 103q.097-4.972.097-9.994V25h7.8q-.097 4.973-.146 9.994t-.049 10.091v37.733q0 5.07.05 10.09.048 5.022.145 10.092Zm4.095-72.15V25H90.13v5.07l-11.602.78Z" fill="#1a1612"/></svg></div>
+      <div class="swatch light" style="flex:1"><svg class="sz16" viewBox="0 0 128 128"><path d="M72.243 69.798q-6.435 0-11.7-1.804-5.266-1.804-8.97-5.168-3.706-3.363-5.704-8.092-1.999-4.729-1.999-10.481 0-5.948 2.194-10.628t6.288-7.946 9.8-4.973T74.971 19h7.703v5.363H72.243ZM79.36 97q.097-4.972.097-9.994V19h7.8q-.097 4.973-.146 9.994t-.049 10.091v37.733q0 5.07.05 10.09.048 5.022.145 10.092Zm4.095-72.15V19H96.13v5.07l-11.602.78Z" fill="#1a1612" opacity=".35"/><path d="M66.243 75.798q-6.435 0-11.7-1.804-5.266-1.804-8.97-5.168-3.706-3.363-5.704-8.092-1.999-4.729-1.999-10.481 0-5.948 2.194-10.628t6.288-7.946 9.8-4.973T68.971 25h7.703v5.363H66.243ZM73.36 103q.097-4.972.097-9.994V25h7.8q-.097 4.973-.146 9.994t-.049 10.091v37.733q0 5.07.05 10.09.048 5.022.145 10.092Zm4.095-72.15V25H90.13v5.07l-11.602.78Z" fill="#1a1612"/></svg></div>
+    </div>
+    <div class="note">Two copies offset ~6% diagonally, back copy faded. Offset-print misregister — Saul Bass adjacent. Doubling reads as noise below ~32px. <span class="flag warn">brandmark only</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>06 — frame</h2><span class="theme">Scandi</span></div>
+    <div class="swatches">
+      <div class="swatch light big"><svg viewBox="0 0 128 128"><rect width="100" height="100" x="14" y="14" stroke-width="2" stroke="#1a1612" fill="none" rx="18"/><path d="M65.61 72.47q-4.62 0-8.4-1.295t-6.44-3.71-4.095-5.81-1.435-7.525q0-4.27 1.575-7.63t4.515-5.705 7.035-3.57T67.57 36h5.53v3.85h-7.49ZM70.72 92q.07-3.57.07-7.175V36h5.6q-.07 3.57-.105 7.175t-.035 7.245v27.09q0 3.64.035 7.245T76.39 92Zm2.94-51.8V36h9.1v3.64l-8.33.56Z" fill="#1a1612"/></svg></div>
+      <div class="swatch dark big"><svg viewBox="0 0 128 128"><rect width="100" height="100" x="14" y="14" stroke-width="2" stroke="#e8e2d7" fill="none" rx="18"/><path d="M65.61 72.47q-4.62 0-8.4-1.295t-6.44-3.71-4.095-5.81-1.435-7.525q0-4.27 1.575-7.63t4.515-5.705 7.035-3.57T67.57 36h5.53v3.85h-7.49ZM70.72 92q.07-3.57.07-7.175V36h5.6q-.07 3.57-.105 7.175t-.035 7.245v27.09q0 3.64.035 7.245T76.39 92Zm2.94-51.8V36h9.1v3.64l-8.33.56Z" fill="#e8e2d7"/></svg></div>
+    </div>
+    <div class="sizes">
+      <div class="swatch light" style="flex:1"><svg class="sz32" viewBox="0 0 128 128"><rect width="100" height="100" x="14" y="14" stroke-width="2" stroke="#1a1612" fill="none" rx="18"/><path d="M65.61 72.47q-4.62 0-8.4-1.295t-6.44-3.71-4.095-5.81-1.435-7.525q0-4.27 1.575-7.63t4.515-5.705 7.035-3.57T67.57 36h5.53v3.85h-7.49ZM70.72 92q.07-3.57.07-7.175V36h5.6q-.07 3.57-.105 7.175t-.035 7.245v27.09q0 3.64.035 7.245T76.39 92Zm2.94-51.8V36h9.1v3.64l-8.33.56Z" fill="#1a1612"/></svg></div>
+      <div class="swatch light" style="flex:1"><svg class="sz16" viewBox="0 0 128 128"><rect width="100" height="100" x="14" y="14" stroke-width="2" stroke="#1a1612" fill="none" rx="18"/><path d="M65.61 72.47q-4.62 0-8.4-1.295t-6.44-3.71-4.095-5.81-1.435-7.525q0-4.27 1.575-7.63t4.515-5.705 7.035-3.57T67.57 36h5.53v3.85h-7.49ZM70.72 92q.07-3.57.07-7.175V36h5.6q-.07 3.57-.105 7.175t-.035 7.245v27.09q0 3.64.035 7.245T76.39 92Zm2.94-51.8V36h9.1v3.64l-8.33.56Z" fill="#1a1612"/></svg></div>
+    </div>
+    <div class="note">Lightest weight glyph, thin rounded-square frame, generous padding. Calm and airy; frame and light strokes vanish under 32px. <span class="flag warn">brandmark only</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>07 — outline</h2><span class="theme">Scandi</span></div>
+    <div class="swatches">
+      <div class="swatch light big"><svg viewBox="0 0 128 128"><path stroke-width="3" d="M316 149q-66 0-120 18.5t-92 53-58.5 83T25 411q0 61 22.5 109t64.5 81.5 100.5 51T344 670h79v-55H316Zm73-279q1 51 1 102.5V670h80q-1-51-1.5-102.5T468 464V77q0-52 .5-103.5T470-130Zm42 740v60h130v-52l-119-8Z" stroke="#1a1612" fill="none" transform="matrix(.105 0 0 -.105 33.235 92.35)" vector-effect="non-scaling-stroke"/></svg></div>
+      <div class="swatch dark big"><svg viewBox="0 0 128 128"><path stroke-width="3" d="M316 149q-66 0-120 18.5t-92 53-58.5 83T25 411q0 61 22.5 109t64.5 81.5 100.5 51T344 670h79v-55H316Zm73-279q1 51 1 102.5V670h80q-1-51-1.5-102.5T468 464V77q0-52 .5-103.5T470-130Zm42 740v60h130v-52l-119-8Z" stroke="#e8e2d7" fill="none" transform="matrix(.105 0 0 -.105 33.235 92.35)" vector-effect="non-scaling-stroke"/></svg></div>
+    </div>
+    <div class="sizes">
+      <div class="swatch light" style="flex:1"><svg class="sz32" viewBox="0 0 128 128"><path stroke-width="3" d="M316 149q-66 0-120 18.5t-92 53-58.5 83T25 411q0 61 22.5 109t64.5 81.5 100.5 51T344 670h79v-55H316Zm73-279q1 51 1 102.5V670h80q-1-51-1.5-102.5T468 464V77q0-52 .5-103.5T470-130Zm42 740v60h130v-52l-119-8Z" stroke="#1a1612" fill="none" transform="matrix(.105 0 0 -.105 33.235 92.35)" vector-effect="non-scaling-stroke"/></svg></div>
+      <div class="swatch light" style="flex:1"><svg class="sz16" viewBox="0 0 128 128"><path stroke-width="3" d="M316 149q-66 0-120 18.5t-92 53-58.5 83T25 411q0 61 22.5 109t64.5 81.5 100.5 51T344 670h79v-55H316Zm73-279q1 51 1 102.5V670h80q-1-51-1.5-102.5T468 464V77q0-52 .5-103.5T470-130Zm42 740v60h130v-52l-119-8Z" stroke="#1a1612" fill="none" transform="matrix(.105 0 0 -.105 33.235 92.35)" vector-effect="non-scaling-stroke"/></svg></div>
+    </div>
+    <div class="note">The glyph contour itself stroked, unfilled — draws the counter as a second line inside the bowl. Delicate, drawing-like. Closes up to a blob under 32px. <span class="flag warn">brandmark only</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>08 — plate</h2><span class="theme">Industrial</span></div>
+    <div class="swatches">
+      <div class="swatch light big"><svg viewBox="0 0 128 128"><mask id="m08a"><rect width="128" height="128" fill="#fff"/><path d="M65.898 73.983q-5.445 0-9.9-1.527t-7.59-4.372q-3.136-2.846-4.827-6.848t-1.691-8.868q0-5.033 1.856-8.993t5.322-6.724 8.29-4.207T68.209 31h6.517v4.538h-8.827ZM71.92 97q.082-4.207.082-8.456V31h6.6q-.082 4.208-.123 8.456-.041 4.249-.041 8.539v31.927q0 4.29.04 8.54.042 4.248.124 8.538Zm3.465-61.05V31H86.11v4.29l-9.817.66Z" fill="#000"/></mask><rect width="108" height="108" x="10" y="10" mask="url(#m08a)" rx="6" fill="#1a1612"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" stroke="#1a1612" fill="none" rx="3"/></svg></div>
+      <div class="swatch dark big"><svg viewBox="0 0 128 128"><mask id="m08b"><rect width="128" height="128" fill="#fff"/><path d="M65.898 73.983q-5.445 0-9.9-1.527t-7.59-4.372q-3.136-2.846-4.827-6.848t-1.691-8.868q0-5.033 1.856-8.993t5.322-6.724 8.29-4.207T68.209 31h6.517v4.538h-8.827ZM71.92 97q.082-4.207.082-8.456V31h6.6q-.082 4.208-.123 8.456-.041 4.249-.041 8.539v31.927q0 4.29.04 8.54.042 4.248.124 8.538Zm3.465-61.05V31H86.11v4.29l-9.817.66Z" fill="#000"/></mask><rect width="108" height="108" x="10" y="10" mask="url(#m08b)" rx="6" fill="#e8e2d7"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" stroke="#e8e2d7" fill="none" rx="3"/></svg></div>
+    </div>
+    <div class="sizes">
+      <div class="swatch light" style="flex:1"><svg class="sz32" viewBox="0 0 128 128"><mask id="m08c"><rect width="128" height="128" fill="#fff"/><path d="M65.898 73.983q-5.445 0-9.9-1.527t-7.59-4.372q-3.136-2.846-4.827-6.848t-1.691-8.868q0-5.033 1.856-8.993t5.322-6.724 8.29-4.207T68.209 31h6.517v4.538h-8.827ZM71.92 97q.082-4.207.082-8.456V31h6.6q-.082 4.208-.123 8.456-.041 4.249-.041 8.539v31.927q0 4.29.04 8.54.042 4.248.124 8.538Zm3.465-61.05V31H86.11v4.29l-9.817.66Z" fill="#000"/></mask><rect width="108" height="108" x="10" y="10" mask="url(#m08c)" rx="6" fill="#1a1612"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" stroke="#1a1612" fill="none" rx="3"/></svg></div>
+      <div class="swatch light" style="flex:1"><svg class="sz16" viewBox="0 0 128 128"><mask id="m08d"><rect width="128" height="128" fill="#fff"/><path d="M65.898 73.983q-5.445 0-9.9-1.527t-7.59-4.372q-3.136-2.846-4.827-6.848t-1.691-8.868q0-5.033 1.856-8.993t5.322-6.724 8.29-4.207T68.209 31h6.517v4.538h-8.827ZM71.92 97q.082-4.207.082-8.456V31h6.6q-.082 4.208-.123 8.456-.041 4.249-.041 8.539v31.927q0 4.29.04 8.54.042 4.248.124 8.538Zm3.465-61.05V31H86.11v4.29l-9.817.66Z" fill="#000"/></mask><rect width="108" height="108" x="10" y="10" mask="url(#m08d)" rx="6" fill="#1a1612"/><rect width="92" height="92" x="18" y="18" stroke-width="1.5" stroke="#1a1612" fill="none" rx="3"/></svg></div>
+    </div>
+    <div class="note">Glyph knocked out of a heavy square plate with an inset rule border. High ink coverage, engineered feel. <span class="flag ok">16px OK</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>09 — stencil</h2><span class="theme">Industrial</span></div>
+    <div class="swatches">
+      <div class="swatch light big"><svg viewBox="0 0 128 128"><mask id="m09a"><path d="M66.358 76.403q-6.766 0-12.3-1.897-5.535-1.896-9.43-5.432t-5.997-8.508-2.101-11.019q0-6.252 2.306-11.172t6.611-8.354 10.302-5.227T69.227 23h8.098v5.638H66.357ZM73.84 105q.102-5.228.102-10.506V23h8.2q-.102 5.227-.153 10.506t-.052 10.609v39.668q0 5.33.052 10.608.051 5.279.153 10.609Zm4.305-75.85V23H91.47v5.33l-12.197.82Z" fill="#fff"/><path d="M0 60h128v7H0z" fill="#000"/><path d="M60 0h7v128h-7z" fill="#000"/></mask><path d="M0 0h128v128H0z" mask="url(#m09a)" fill="#1a1612"/></svg></div>
+      <div class="swatch dark big"><svg viewBox="0 0 128 128"><mask id="m09b"><path d="M66.358 76.403q-6.766 0-12.3-1.897-5.535-1.896-9.43-5.432t-5.997-8.508-2.101-11.019q0-6.252 2.306-11.172t6.611-8.354 10.302-5.227T69.227 23h8.098v5.638H66.357ZM73.84 105q.102-5.228.102-10.506V23h8.2q-.102 5.227-.153 10.506t-.052 10.609v39.668q0 5.33.052 10.608.051 5.279.153 10.609Zm4.305-75.85V23H91.47v5.33l-12.197.82Z" fill="#fff"/><path d="M0 60h128v7H0z" fill="#000"/><path d="M60 0h7v128h-7z" fill="#000"/></mask><path d="M0 0h128v128H0z" mask="url(#m09b)" fill="#e8e2d7"/></svg></div>
+    </div>
+    <div class="sizes">
+      <div class="swatch light" style="flex:1"><svg class="sz32" viewBox="0 0 128 128"><mask id="m09c"><path d="M66.358 76.403q-6.766 0-12.3-1.897-5.535-1.896-9.43-5.432t-5.997-8.508-2.101-11.019q0-6.252 2.306-11.172t6.611-8.354 10.302-5.227T69.227 23h8.098v5.638H66.357ZM73.84 105q.102-5.228.102-10.506V23h8.2q-.102 5.227-.153 10.506t-.052 10.609v39.668q0 5.33.052 10.608.051 5.279.153 10.609Zm4.305-75.85V23H91.47v5.33l-12.197.82Z" fill="#fff"/><path d="M0 60h128v7H0z" fill="#000"/><path d="M60 0h7v128h-7z" fill="#000"/></mask><path d="M0 0h128v128H0z" mask="url(#m09c)" fill="#1a1612"/></svg></div>
+      <div class="swatch light" style="flex:1"><svg class="sz16" viewBox="0 0 128 128"><mask id="m09d"><path d="M66.358 76.403q-6.766 0-12.3-1.897-5.535-1.896-9.43-5.432t-5.997-8.508-2.101-11.019q0-6.252 2.306-11.172t6.611-8.354 10.302-5.227T69.227 23h8.098v5.638H66.357ZM73.84 105q.102-5.228.102-10.506V23h8.2q-.102 5.227-.153 10.506t-.052 10.609v39.668q0 5.33.052 10.608.051 5.279.153 10.609Zm4.305-75.85V23H91.47v5.33l-12.197.82Z" fill="#fff"/><path d="M0 60h128v7H0z" fill="#000"/><path d="M60 0h7v128h-7z" fill="#000"/></mask><path d="M0 0h128v128H0z" mask="url(#m09d)" fill="#1a1612"/></svg></div>
+    </div>
+    <div class="note">Rectangular bridge gaps cut through bowl and stem, shipping-stencil style. Gaps read cleanly even small. <span class="flag ok">16px OK</span></div>
+  </div>
+
+</div>

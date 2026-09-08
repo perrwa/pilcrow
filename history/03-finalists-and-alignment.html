@@ -1,0 +1,110 @@
+<title>Pilcrow Finalists</title>
+<style>
+  :root {
+    --bg: #f5f3ef;
+    --panel: #ffffff;
+    --ink: #1a1612;
+    --ink-soft: #706860;
+    --border: #ded6ca;
+    --accent: #2c3e63;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    --serif: Charter, Georgia, 'Times New Roman', serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14120f;
+      --panel: #1e1b17;
+      --ink: #e8e2d7;
+      --ink-soft: #96897d;
+      --border: #332e27;
+      --accent: #9ab2e0;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    margin: 0;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  header { max-width: 900px; margin: 0 auto 2.5rem; }
+  h1 { font-size: 1.9rem; margin: 0 0 0.3rem; letter-spacing: -0.01em; }
+  header p { color: var(--ink-soft); margin: 0; font-size: 0.95rem; max-width: 62ch; line-height: 1.5; }
+  .row {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1.1rem;
+  }
+  .cell {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.3rem 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cell.variant { border-color: var(--accent); }
+  .mark-slot { width: 128px; height: 128px; display: flex; align-items: center; justify-content: center; }
+  .mark-slot svg { width: 112px; height: 112px; }
+  .label { text-align: center; margin-top: 0.7rem; width: 100%; }
+  .fam { display: block; font-size: 0.95rem; font-weight: 600; line-height: 1.25; }
+  .meta { display: block; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-soft); margin-top: 0.2rem; }
+  .note {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+    line-height: 1.4;
+  }
+  .tag {
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 0 0.35rem;
+    margin-left: 0.3rem;
+    vertical-align: 1px;
+  }
+</style>
+<header>
+  <h1>Plate — 3 finalists + Joan alignment exploration</h1>
+  <p>Narrowed to Joan, Overpass, and Overpass Mono, Plate composition only, no inset stroke. Plus 4 Joan alignment variants, all sharing the same enlarged glyph (1.2×) and horizontal placement. Control keeps the original bowl-anchored vertical placement; the other 3 bottom-align the entire glyph (stem/descender included) against the plate, then push down by 0%, 5%, and 10% of the plate's inner height — all computed from plate geometry, no hand-picked pixels.</p>
+</header>
+<div class="row">
+  <div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-joan"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M65.602 63.246q-6.622.214-11.18-2.065t-6.907-5.982-2.35-7.762q0-3.774 1.709-6.872t4.593-5.34q2.884-2.244 6.551-3.348t7.584-.819ZM70.445 97V31.414q2.99.143 5.732.428t6.658.712l-.142 2.136q-1.21-.071-2.955.071-1.745.143-3.027.499v59.746Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-joan)" rx="6"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Joan</span><span class="meta">weight 400</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-overpass"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M60.077 97V62.203q-4.29-.146-7.334-1.576t-4.95-3.685-2.805-4.932-.898-5.317q0-3.85 1.632-7.461t5.371-5.922T61.177 31H83.91v55.293l-9.13 4.18V39.837h-5.537v53.02Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-overpass)" rx="6"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Overpass</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-overpass-mono"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M60.847 97V62.167q-4.474-.11-7.627-1.54t-5.115-3.704-2.86-4.968-.898-5.335q0-3.85 1.613-7.443 1.613-3.594 5.317-5.885Q54.98 31 61.287 31h22.366v55.88l-8.506 3.887V39.14H69.28v54.047Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-overpass-mono)" rx="6"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Overpass Mono</span><span class="meta">weight 700</span></div>
+    </div>
+<div class="cell variant">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-joan-large-bottom"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M65.923 79.355q-7.947.257-13.416-2.478-5.47-2.734-8.29-7.178t-2.82-9.314q0-4.53 2.051-8.247t5.512-6.409 7.862-4.016q4.4-1.325 9.1-.983Zm5.81 40.505V41.158q3.59.17 6.88.512t7.99.855l-.171 2.563q-1.453-.085-3.547.086-2.093.17-3.632.598v71.695Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-joan-large-bottom)" rx="6"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Joan <span class="tag">control</span></span><span class="meta">weight 400</span><span class="note">locked-in reference: bowl centered at a hand-tuned CY</span></div>
+    </div>
+<div class="cell variant">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-joan-bottom-aligned"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M65.923 77.495q-7.947.256-13.416-2.478t-8.29-7.178-2.82-9.315q0-4.529 2.051-8.246t5.512-6.409 7.862-4.016 9.1-.983ZM71.733 118V39.297q3.59.171 6.88.513t7.99.855l-.171 2.563q-1.453-.085-3.547.086-2.093.17-3.632.598v71.695Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-joan-bottom-aligned)" rx="6"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Joan <span class="tag">bottom-aligned</span></span><span class="meta">weight 400</span><span class="note">entire glyph's bottom edge flush with the plate's inner edge (CY=118, = plate inner bottom)</span></div>
+    </div>
+<div class="cell variant">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-joan-bottom-aligned-plus5pct"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M65.923 82.895q-7.947.256-13.416-2.478t-8.29-7.178-2.82-9.315q0-4.529 2.051-8.246t5.512-6.409 7.862-4.016 9.1-.983Zm5.81 40.505V44.697q3.59.171 6.88.513t7.99.855l-.171 2.563q-1.453-.085-3.547.086-2.093.17-3.632.598v71.695Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-joan-bottom-aligned-plus5pct)" rx="6"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Joan <span class="tag">bottom-aligned +5% plate height</span></span><span class="meta">weight 400</span><span class="note">bottom-aligned, pushed down by 5% of the plate's inner height (5.4 units, CY=123.40)</span></div>
+    </div>
+<div class="cell variant">
+      <div class="mark-slot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><mask id="m-plate-joan-bottom-aligned-plus10pct"><path fill="#fff" d="M0 0h128v128H0z"/><path d="M65.923 88.295q-7.947.256-13.416-2.478t-8.29-7.178-2.82-9.315q0-4.529 2.051-8.246t5.512-6.409 7.862-4.016 9.1-.983Zm5.81 40.505V50.097q3.59.171 6.88.513t7.99.855l-.171 2.563q-1.453-.085-3.547.086-2.093.17-3.632.598v71.695Z"/></mask><rect width="108" height="108" x="10" y="10" class="mk" mask="url(#m-plate-joan-bottom-aligned-plus10pct)" rx="6"/><style>.mk{fill:#000}@media (prefers-color-scheme:dark){.mk{fill:#fff}}</style></svg></div>
+      <div class="label"><span class="fam">Joan <span class="tag">bottom-aligned +10% plate height</span></span><span class="meta">weight 400</span><span class="note">bottom-aligned, pushed down by 10% of the plate's inner height (10.8 units, CY=128.80)</span></div>
+    </div>
+</div>

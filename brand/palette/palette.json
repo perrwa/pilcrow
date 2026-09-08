@@ -1,0 +1,53 @@
+{
+  "site": {
+    "_source": "src/styles/global.css in perrwa.github.io — copied verbatim, keep in sync manually",
+    "black": {
+      "light": "rgb(26, 22, 18)",
+      "dark": "rgb(232, 226, 217)"
+    },
+    "gray": {
+      "light": "rgb(112, 104, 96)",
+      "dark": "rgb(150, 142, 132)"
+    },
+    "gray-light": {
+      "light": "rgb(228, 222, 214)",
+      "dark": "rgb(48, 43, 38)"
+    },
+    "gray-dark": {
+      "light": "rgb(40, 35, 30)",
+      "dark": "rgb(214, 208, 199)"
+    },
+    "bg": {
+      "light": "rgb(253, 252, 250)",
+      "dark": "rgb(20, 18, 15)"
+    },
+    "accent": {
+      "light": "rgb(44, 62, 99)",
+      "dark": "rgb(154, 178, 224)"
+    },
+    "accent-hover": {
+      "light": "rgb(88, 110, 156)",
+      "dark": "rgb(190, 208, 240)"
+    },
+    "heading": {
+      "light": "rgb(58, 66, 84)",
+      "dark": "rgb(198, 204, 216)"
+    },
+    "image-outline": {
+      "light": "oklch(0 0 0 / 0.1)",
+      "dark": "oklch(1 0 0 / 0.1)"
+    }
+  },
+  "brand": {
+    "accent-blue": {
+      "light": "#2c3e63",
+      "dark": "#9ab2e0",
+      "note": "Same values as site accent, restated as standalone hex for use outside CSS-variable contexts (slides, print, etc.)"
+    },
+    "warm-midcentury": {
+      "light": "#b8542e",
+      "dark": "#e3a458",
+      "note": "Introduced for the pilcrow brandmark; not currently used on the site"
+    }
+  }
+}

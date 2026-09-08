@@ -1,0 +1,21 @@
+{
+  "name": "pilcrow",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal pilcrow (¶) brandmark — favicon, brand assets, and design history",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-joan.mjs",
+    "build:marks": "node scripts/build-marks.mjs",
+    "build:raster": "node scripts/build-raster.mjs",
+    "build:favicon": "node scripts/build-favicon.mjs",
+    "build:palette": "node scripts/build-palette.mjs",
+    "build:preview": "node scripts/build-preview.mjs",
+    "build": "npm run fetch && npm run build:marks && npm run build:raster && npm run build:favicon && npm run build:palette && npm run build:preview"
+  },
+  "devDependencies": {
+    "fontkitten": "^1.0.3",
+    "sharp": "^0.35.4",
+    "svgo": "^4.1.0"
+  }
+}
