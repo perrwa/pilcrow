@@ -40,8 +40,8 @@ Plate won. Regular weight, all 3 colors kept; none discarded.
 
 ## Final spec
 
-| | |
-|---|---|
+| Attribute | Value |
+| --- | --- |
 | Composition | Plate |
 | Typeface | Joan (Regular, the only weight that exists) |
 | Size | 79.2 (66 x 1.2) |
