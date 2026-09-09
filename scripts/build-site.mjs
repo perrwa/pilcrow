@@ -96,7 +96,12 @@ const historyMd = readFileSync(path.join(ROOT, 'history/HISTORY.md'), 'utf8')
   .replace(/\]\((\d\d-[\w-]+\.html)\)/g, '](history/$1)');
 const historyHtml = marked.parse(historyMd);
 
-const headerMark = readFileSync(path.join(ROOT, 'brand/marks/pilcrow-accent.svg'), 'utf8');
+// forceColor strips the mark's own <style> block — left intact, it would
+// cascade to every other .mk-classed mark on the page (the bug documented
+// in history/HISTORY.md §4). var(--accent) keeps it theme-adaptive since
+// that custom property already flips under prefers-color-scheme above.
+const headerMarkRaw = readFileSync(path.join(ROOT, 'brand/marks/pilcrow-accent.svg'), 'utf8');
+const headerMark = forceColor(headerMarkRaw, 'var(--accent)');
 
 const html = `<!doctype html>
 <html>
