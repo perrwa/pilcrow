@@ -2,3 +2,4 @@ node_modules/
 fonts/
 dist/
 .DS_Store
+.claude/

@@ -76,11 +76,11 @@ jobs:
             exit 1
           fi
 
-      # perrwa/perrwa.github.io is public but this repo is private, so a
-      # PAT scoped to just that repo (contents+PRs: write) is used instead
-      # of GITHUB_TOKEN. GITHUB_TOKEN-authored pushes also don't trigger
-      # workflows on the target repo, which would leave the PR's required
-      # checks (verify, lint-title) stuck pending forever.
+      # GITHUB_TOKEN can't write to a different repo, so a PAT scoped to
+      # just perrwa.github.io (contents+PRs: write) is used instead.
+      # GITHUB_TOKEN-authored pushes also don't trigger workflows on the
+      # target repo, which would leave the PR's required checks (verify,
+      # lint-title) stuck pending forever.
       - name: Checkout perrwa.github.io
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:

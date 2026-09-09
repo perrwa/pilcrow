@@ -27,4 +27,11 @@ Every locked number, glyph size, vertical position, stroke width, and hex value,
 
 ## License
 
-Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — see `LICENSE`.
+The glyph outline in `brand/marks/` derives from [Joan](https://github.com/PaoloBiagini/Joan) by Paolo Biagini, licensed [OFL 1.1](https://openfontlicense.org/). The font itself is never redistributed here — `scripts/fetch-joan.mjs` pulls it fresh from upstream at build time.
+
+This repo splits licensing between the mark and the code that generates it:
+
+| Path                                 | License                                                                               |
+| ------------------------------------ | ------------------------------------------------------------------------------------- |
+| `brand/`, `history/`, `preview.html` | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — see `LICENSE` |
+| `scripts/`, `tests/`, config files   | MIT — see `LICENSE-CODE`                                                              |
