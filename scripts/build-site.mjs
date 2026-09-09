@@ -36,11 +36,11 @@ const STYLE = `
   }
   * { box-sizing: border-box; }
   body { background: var(--bg); color: var(--ink); font-family: var(--serif); margin: 0; padding: 2.5rem 1.5rem 4rem; }
-  header { max-width: 1000px; margin: 0 auto 2rem; }
+  header { max-width: 960px; margin: 0 auto 2rem; }
   h1 { font-size: 1.9rem; margin: 0 0 0.3rem; }
-  h2 { max-width: 1000px; margin: 2.5rem auto 1rem; font-size: 1.15rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+  h2 { max-width: 960px; margin: 2.5rem auto 1rem; font-size: 1.15rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
   p.lede { color: var(--ink-soft); font-size: 0.9rem; max-width: 70ch; margin: 0; }
-  .row { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .row { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
   .cell { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; align-items: center; }
   .swatches { display: flex; gap: 0.6rem; margin-bottom: 0.7rem; width: 100%; }
   .swatch { flex: 1; height: 100px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -48,12 +48,12 @@ const STYLE = `
   .swatch.dark { background: #14120f; }
   .swatch svg { width: 76px; height: 76px; }
   .label { font-size: 0.85rem; font-weight: 600; }
-  .links { max-width: 1000px; margin: 0 auto; }
+  .links { max-width: 960px; margin: 0 auto; }
   .links ul { padding-left: 1.2rem; line-height: 1.8; }
   .links a { color: var(--accent); }
-  .favicon-strip { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem; }
+  .favicon-strip { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem; }
   .favicon-strip img { image-rendering: pixelated; }
-  .prose { max-width: 1000px; margin: 0 auto; }
+  .prose { max-width: 960px; margin: 0 auto; }
   .prose h2 { margin-top: 2rem; }
   .prose p, .prose ul { line-height: 1.6; }
   .prose code { font-family: var(--mono); font-size: 0.85em; background: var(--panel); border: 1px solid var(--border); border-radius: 4px; padding: 0.1em 0.35em; }
@@ -173,7 +173,7 @@ const pngHtml = `<!doctype html>
 <meta charset="utf-8">
 <title>Pilcrow Raster Exports</title>
 <style>${STYLE}
-  table { border-collapse: collapse; max-width: 1000px; margin: 0 auto; }
+  table { border-collapse: collapse; max-width: 960px; margin: 0 auto; }
   th, td { border: 1px solid var(--border); padding: 0.8rem; text-align: center; vertical-align: middle; }
   th { background: var(--panel); text-align: left; }
   .png-pair { display: flex; gap: 0.4rem; justify-content: center; align-items: center; }
