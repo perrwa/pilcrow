@@ -1,10 +1,10 @@
 # pilcrow
 
-Personal brandmark: a serif pilcrow (¶), Perry Wang's first initial. Built from [Joan](https://github.com/PaoloBiagini/Joan) (OFL), knocked out of a square plate. The full design history and reasoning behind every number in this repo lives in `history/HISTORY.md`.
+A serif pilcrow (¶), knocked out of a square plate and built from [Joan](https://github.com/PaoloBiagini/Joan) (OFL); doubles as a first initial. The full design history and reasoning behind every number in this repo lives in `history/HISTORY.md`.
 
 ## What's here
 
-`brand/marks/` holds the mark in 3 colors as SVG, each flipping light and dark automatically via `prefers-color-scheme`. `brand/marks/png/` holds flattened PNGs at 16, 32, 48, 180, 512, and 1024, one file per color per mode (`pilcrow-{color}-{mode}-{size}.png`), since a static PNG can't carry a media query the way an SVG can.
+`brand/marks/` holds the mark in 3 colors as SVG, each flipping light and dark automatically via `prefers-color-scheme`. `brand/marks/png/` holds flattened PNGs at 16/32/48/180/512/1024, one file per color per mode (`pilcrow-{color}-{mode}-{size}.png`), since a static PNG can't carry a media query the way an SVG can.
 
 `brand/marks/goofy/` is a faux-bold alt-direction. Joan has no real bold anywhere in its source, so this is a stroke-thickened variant, kept separate from the primary size matrix and not meant to substitute for it.
 
@@ -21,17 +21,17 @@ npm install
 npm run build
 ```
 
-That single command runs fetch, marks, raster, favicon, and palette generation in order. Each step can also run on its own: `npm run fetch`, `build:marks`, `build:raster`, `build:favicon`, `build:palette`. The font is pulled fresh from [PaoloBiagini/Joan](https://github.com/PaoloBiagini/Joan) on GitHub on every build rather than committed to the repo; `history/HISTORY.md` explains why GitHub was chosen over Google Fonts as the source.
+That single command runs the pipeline in order: fetch → marks → raster → favicon → palette. Each step can also run on its own: `npm run fetch`, `build:marks`, `build:raster`, `build:favicon`, `build:palette`. The font is pulled fresh from [PaoloBiagini/Joan](https://github.com/PaoloBiagini/Joan) on GitHub on every build rather than committed to the repo; `history/HISTORY.md` explains why GitHub was chosen over Google Fonts as the source.
 
 Every locked number, glyph size, vertical position, stroke width, and hex value, lives as a named constant in `scripts/mark-spec.mjs` and `scripts/plate-geometry.mjs` rather than as a magic literal buried in the generation code.
 
 ## License
 
-The glyph outline in `brand/marks/` derives from [Joan](https://github.com/PaoloBiagini/Joan) by Paolo Biagini, licensed [OFL 1.1](https://openfontlicense.org/). The font itself is never redistributed here — `scripts/fetch-joan.mjs` pulls it fresh from upstream at build time.
+The glyph outline in `brand/marks/` derives from [Joan](https://github.com/PaoloBiagini/Joan) by Paolo Biagini, licensed [OFL 1.1](https://openfontlicense.org/). The font itself is never redistributed here; `scripts/fetch-joan.mjs` pulls it fresh from upstream at build time.
 
 This repo splits licensing between the mark and the code that generates it:
 
-| Path                                 | License                                                                               |
-| ------------------------------------ | ------------------------------------------------------------------------------------- |
-| `brand/`, `history/`, `preview.html` | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — see `LICENSE` |
-| `scripts/`, `tests/`, config files   | MIT — see `LICENSE-CODE`                                                              |
+| Path                                 | License                                                                           |
+| ------------------------------------ | --------------------------------------------------------------------------------- |
+| `brand/`, `history/`, `preview.html` | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (`LICENSE`) |
+| `scripts/`, `tests/`, config files   | MIT (`LICENSE-CODE`)                                                              |

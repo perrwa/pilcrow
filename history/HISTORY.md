@@ -4,7 +4,7 @@ How this mark got from "generate 9 options" to the locked spec shipped in `brand
 
 ## 1. Nine options → [`01-nine-options.html`](01-nine-options.html)
 
-Started from one instruction: a serif pilcrow (¶, first initial P), transparent background, spanning midcentury modern, Scandi, industrial, and Japanese minimalism themes. Built 9 mono compositions from Source Serif 4, the site's own typeface, by extracting the actual glyph outline via `fontkitten` instead of hand-drawing an approximation.
+Started from one instruction: a serif pilcrow (¶, first initial P), transparent background, spanning midcentury modern, Scandi, industrial, Japanese minimalism themes. Built 9 mono compositions from Source Serif 4, the site's own typeface, by extracting the actual glyph outline via `fontkitten` instead of hand-drawing an approximation.
 
 The 9: `sumi` (bare glyph), `ma` (asymmetric plus a rule), `hanko` (seal ring), `disc` (knockout circle), `misregister` (offset double-print), `frame` (light rounded square), `outline` (stroked contour), `plate` (knockout square), `stencil` (bridge-cut gaps).
 
@@ -12,9 +12,9 @@ Three carried forward: sumi, misregister, plate.
 
 ## 2. Fourteen typefaces → [`02-typeface-comparison.html`](02-typeface-comparison.html)
 
-Held those 3 compositions constant and swapped the typeface, to separate what the composition contributes from what the letterform contributes. Source Serif 4 served as the control, tested against Lusitana, Joan, Sedan SC, Manuale, Space Grotesk, Space Mono, Monoton, Dongle, Tilt Neon, Wendy One, Overpass, Overpass Mono, and McLaren. The list deliberately mixed serif, sans, mono, and display faces. All 14 turned out to have a real pilcrow glyph, even the display fonts.
+Held those 3 compositions constant and swapped the typeface, to separate what the composition contributes from what the letterform contributes. Source Serif 4 served as the control, tested against Lusitana, Joan, Sedan SC, Manuale, Space Grotesk, Space Mono, Monoton, Dongle, Tilt Neon, Wendy One, Overpass, Overpass Mono, and McLaren. The list deliberately mixed serif, sans, mono, display faces. All 14 turned out to have a real pilcrow glyph, even the display fonts.
 
-Narrowed to Joan, Overpass, and Overpass Mono on Plate.
+Narrowed to Joan, Overpass, Overpass Mono on Plate.
 
 ## 3. Finalists and alignment → [`03-finalists-and-alignment.html`](03-finalists-and-alignment.html)
 
@@ -34,7 +34,7 @@ This round also hit and fixed a real bug worth remembering. A `<style>` block in
 
 ## 5. Composition comparison → [`05-composition-comparison.html`](05-composition-comparison.html)
 
-Compared Plate against Sumi and Misregister at the final size and color. First pass transplanted Plate's exact placement onto them; that got reverted so each composition kept its own original centering, since sumi and misregister were never meant to share plate's alignment treatment. Sumi and misregister were scaled to 1.33x their own original base sizes as a reference point, not as a shipped output.
+Compared plate against sumi and misregister at the final size and color. First pass transplanted plate's exact placement onto them; that got reverted so each composition kept its own original centering, since sumi and misregister were never meant to share plate's alignment treatment. Sumi and misregister were scaled to 1.33x their own original base sizes purely for size reference; that scaling was never shipped.
 
 Plate won. Regular weight, all 3 colors kept; none discarded.
 
