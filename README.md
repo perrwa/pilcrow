@@ -1,10 +1,8 @@
-<p align="center">
-  <img src="brand/marks/pilcrow-accent.svg" width="96" height="96" alt="pilcrow mark">
-</p>
+<img src="brand/marks/pilcrow-accent.svg" width="96" height="96" alt="pilcrow mark">
 
-<h1 align="center">pilcrow</h1>
+# pilcrow
 
-<p align="center">A serif pilcrow (¶), knocked out of a square plate, built from <a href="https://github.com/PaoloBiagini/Joan">Joan</a> (OFL). Doubles as a first initial.</p>
+A serif pilcrow (¶), knocked out of a square plate, built from [Joan](https://github.com/PaoloBiagini/Joan) (OFL). Doubles as a first initial.
 
 ## Build from source
 
