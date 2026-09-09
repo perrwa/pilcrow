@@ -21,7 +21,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Require push token
+        env:
+          ASSET_PUSH_TOKEN: ${{ secrets.ASSET_PUSH_TOKEN }}
+        run: |
+          if [ -z "$ASSET_PUSH_TOKEN" ]; then
+            echo '::error::ASSET_PUSH_TOKEN secret is not set — GITHUB_TOKEN cannot push to main once the branch ruleset is enforced (it is not a valid ruleset bypass actor), so a PAT belonging to a repo admin is required instead.'
+            exit 1
+          fi
+
+      # GITHUB_TOKEN can't push to a ruleset-protected main (it's not a
+      # valid bypass actor); a PAT belonging to a repo admin can, since
+      # main-protection's Admin bypass_actor is set to bypass_mode: always.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          token: ${{ secrets.ASSET_PUSH_TOKEN }}
 
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
