@@ -2,7 +2,7 @@
   "name": "pilcrow",
   "version": "1.0.0",
   "private": true,
-  "license": "CC-BY-NC-SA-4.0",
+  "license": "(MIT AND CC-BY-NC-SA-4.0)",
   "description": "Personal pilcrow (¶) brandmark — favicon, brand assets, and design history",
   "type": "module",
   "engines": {
