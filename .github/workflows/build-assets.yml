@@ -21,9 +21,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: package.json
           cache: npm
@@ -62,7 +62,7 @@ jobs:
       # main, so this picks up whatever the build job just pushed, even
       # though that push is [skip ci] and won't start its own run.
       - name: Checkout pilcrow
-        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: main
           path: pilcrow
@@ -82,7 +82,7 @@ jobs:
       # target repo, which would leave the PR's required checks (verify,
       # lint-title) stuck pending forever.
       - name: Checkout perrwa.github.io
-        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: perrwa/perrwa.github.io
           token: ${{ secrets.SITE_SYNC_TOKEN }}
