@@ -19,5 +19,5 @@ The glyph outline in `brand/marks/` derives from [Joan](https://github.com/Paolo
 
 | Path                               | License                                                                           |
 | ---------------------------------- | --------------------------------------------------------------------------------- |
-| `brand/`, `history/`               | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) (`LICENSE`) |
+| `brand/`, `history/`               | [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) (`LICENSE`) |
 | `scripts/`, `tests/`, config files | MIT (`LICENSE-CODE`)                                                              |
